@@ -134,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, '/login');
                 },
                 child: const Column(
-                  children: [Text('Login Instead')],
+                  children: [Text('Login')],
                 ))
           ],
         ),
