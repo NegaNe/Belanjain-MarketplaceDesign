@@ -1,6 +1,5 @@
-// import 'dart:html';
-// import 'dart:math';
-// import 'package:flutter/foundation.dart';
+// 5
+
 import 'package:flutter/material.dart';
 
 void main() {
@@ -14,11 +13,15 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const HomePage(),
+        '/login': (context) => const LoginPage(),
+      },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
       ),
-      home: const HomePage(),
     );
   }
 }
@@ -29,24 +32,6 @@ class MyApp extends StatelessWidget {
 //   @override
 //   State<HomePage> createState() => _HomePageState();
 // }
-
-// class _HomePageState extends State<HomePage> {
-//   late final TextEditingController _email;
-//   late final TextEditingController _password;
-
-//   @override
-//   void initState() {
-//     _email = TextEditingController();
-//     _password = TextEditingController();
-//     super.initState();
-//   }
-
-//   @override
-//   void dispose() {
-//     _email.dispose();
-//     _password.dispose();
-//     super.dispose();
-//   }
 
 //   @override
 //   Widget build(BuildContext context) {
@@ -89,41 +74,83 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  late final TextEditingController _email;
+  late final TextEditingController _password;
+
+  @override
+  void initState() {
+    _email = TextEditingController();
+    _password = TextEditingController();
+    super.initState();
+  }
+
+  @override
+  void dispose() {
+    _email.dispose();
+    _password.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.amber,
-        appBar: AppBar(
-          title: const Text('Register'),
-        ),
-        body: const Column(
+      appBar: AppBar(
+        title: const Text('Register'),
+      ),
+      body: Center(
+        child: Column(
           children: <Widget>[
-            SizedBox(
-              height: 50,
-              child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: <Widget>[
-                    Text('Login'),
-                  ]),
+            const Text('Register Here'),
+            const SizedBox(
+              width: 50,
+              height: 100,
             ),
-            Column(
-              children: [
-                SizedBox(
-                  width: 300,
-                  child: Column(
-                    children: [
-                      TextField(
-                        decoration: InputDecoration(hintText: 'Enter Email'),
-                      )
-                    ],
-                  ),
-                ),
-                // TextField(
-                //   decoration: InputDecoration(hintText: 'Enter Password'),
-                // ),
-              ],
+            TextField(
+              decoration: const InputDecoration(
+                hintText: ('Email Address'),
+                contentPadding: EdgeInsets.all(25),
+                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
+              ),
+              controller: _email,
             ),
+            const SizedBox(height: 5),
+            TextField(
+              decoration: const InputDecoration(
+                hintText: ('Password'),
+                contentPadding: EdgeInsets.all(25),
+                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
+              ),
+              controller: _email,
+            ),
+            const SizedBox(height: 25),
+            TextButton(
+                onPressed: () {},
+                child: const Column(
+                  children: [Text('Login')],
+                )),
+            const SizedBox(height: 25),
+            TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/login');
+                },
+                child: const Column(
+                  children: [Text('Login Instead')],
+                ))
           ],
-        ));
+        ),
+      ),
+    );
+  }
+}
+
+class LoginPage extends StatelessWidget {
+  const LoginPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(
+      title: const Text('Login'),
+    ));
   }
 }
