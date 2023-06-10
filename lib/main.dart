@@ -126,7 +126,7 @@ class _HomePageState extends State<HomePage> {
             TextButton(
                 onPressed: () {},
                 child: const Column(
-                  children: [Text('Login')],
+                  children: [Text('Register')],
                 )),
             const SizedBox(height: 25),
             TextButton(
