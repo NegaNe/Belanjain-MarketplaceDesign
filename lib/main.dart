@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
                 contentPadding: EdgeInsets.all(25),
                 border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
               ),
-              controller: _email,
+              controller: _password,
             ),
             const SizedBox(height: 25),
             TextButton(
