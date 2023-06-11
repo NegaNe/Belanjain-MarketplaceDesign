@@ -164,17 +164,18 @@ class LoginPage extends StatelessWidget {
           Container(
               margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
               decoration: BoxDecoration(
-                color: Colors.amber,
+                color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
-                border: Border.all(color: Colors.amber),
+                border: Border.all(color: Colors.grey),
               ),
               child: TextFormField(
                 decoration: const InputDecoration(
                     border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
                     labelText: 'Enter Email',
+                    labelStyle: TextStyle(color: Colors.black),
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
-              )
-              ),
+              )),
         ],
       ),
     );
