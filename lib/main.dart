@@ -95,15 +95,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Register'),
+        title: const Text('Belanjain'),
       ),
       body: Center(
         child: Column(
           children: <Widget>[
-            const Text('Register Here'),
+            const SizedBox(height: 50),
+            const Text('Sign Up!'),
             const SizedBox(
               width: 50,
-              height: 100,
+              height: 25,
             ),
             TextField(
               decoration: const InputDecoration(
@@ -149,8 +150,33 @@ class LoginPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-      title: const Text('Login'),
-    ));
+      appBar: AppBar(
+        title: const Text('Login'),
+      ),
+      body: Column(
+        children: [
+          Text('Some Login Text :)'),
+          const TextField(
+            decoration: InputDecoration(
+              hintText: ('ENTER EMAIL'),
+            ),
+          ),
+          Container(
+              margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
+              decoration: BoxDecoration(
+                color: Colors.amber,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.amber),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    labelText: 'Enter Email',
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+              )
+              ),
+        ],
+      ),
+    );
   }
 }
