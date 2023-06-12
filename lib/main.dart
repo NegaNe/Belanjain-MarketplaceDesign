@@ -122,6 +122,7 @@ class _HomePageState extends State<HomePage> {
                 border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
               ),
               controller: _password,
+              obscureText: true,
             ),
             const SizedBox(height: 25),
             TextButton(
@@ -135,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                   Navigator.pushNamed(context, '/login');
                 },
                 child: const Column(
-                  children: [Text('Login Instead')],
+                  children: [Text('Already have Account? Login')],
                 ))
           ],
         ),
@@ -175,7 +176,33 @@ class LoginPage extends StatelessWidget {
                     labelText: 'Enter Email',
                     labelStyle: TextStyle(color: Colors.black),
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
               )),
+          Container(
+            margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
+            decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+            ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Enter Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+            Container(
+              child: TextButton(
+                onPressed: () {
+                  Navigator.pushNamed(context, '/');
+                },
+                child: const Column(
+                  children: [Text('Login')],
+                )),
+            )
         ],
       ),
     );
