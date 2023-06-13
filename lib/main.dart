@@ -97,9 +97,10 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Color(0XFFFFFFFF),
-        title: const Text('B E L A N J A I N', 
+        title: const Text('B E L A N J A I N',
         style: TextStyle(
           fontFamily: 'Lato', 
+          fontSize: 35,
           fontWeight: FontWeight.w900,
           //tambahin 0XFF kalau mau ganti warna pake hex code
           color: Color(0XFF6D6E4C),
@@ -109,8 +110,15 @@ class _HomePageState extends State<HomePage> {
       body: Center(
         child: Column(
           children: <Widget>[
-            const SizedBox(height: 50),
-            const Text('Sign Up!'),
+            const SizedBox(height: 40),
+            const Text('SIGN UP!', 
+            style: TextStyle(
+              fontFamily: 'Lato',
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+              color: Color(0XFF6D6E4C)
+            ),
+            ),
             const SizedBox(
               width: 50,
               height: 25,
