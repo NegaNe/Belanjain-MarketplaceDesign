@@ -95,7 +95,16 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Belanjain'),
+        centerTitle: true,
+        backgroundColor: Color(0XFFFFFFFF),
+        title: const Text('B E L A N J A I N', 
+        style: TextStyle(
+          fontFamily: 'Lato', 
+          fontWeight: FontWeight.w900,
+          //tambahin 0XFF kalau mau ganti warna pake hex code
+          color: Color(0XFF6D6E4C),
+          ),
+          ),
       ),
       body: Center(
         child: Column(
