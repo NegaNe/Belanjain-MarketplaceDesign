@@ -108,33 +108,43 @@ class _HomePageState extends State<HomePage> {
           ),
       ),
       body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             const SizedBox(height: 40),
-            const Text('SIGN UP!', 
-            style: TextStyle(
-              fontFamily: 'Lato',
-              fontSize: 30,
-              fontWeight: FontWeight.w900,
-              color: Color(0XFF6D6E4C)
-            ),
-            ),
-            const SizedBox(height: 1),
-            const Text('Welcome Back', 
-            style: TextStyle(
-              fontFamily: 'Raleway',
-              fontSize: 15,
-              fontWeight: FontWeight.w800,
-              color: Color(0XFF000000),
-            ),
+            Padding(
+              padding: const EdgeInsets.only(left: 18),
+              child: const Text('SIGN UP!', 
+              style: TextStyle(
+                fontFamily: 'Lato',
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+                color: Color(0XFF6D6E4C)
+              ),
+              ),
             ),
             const SizedBox(height: 1),
-            const Text('Hello there Sign Up to continue...', 
-            style: TextStyle(
-              fontFamily: 'RalewayReg',
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-              color: Color(0xff000000),
+            Padding(
+              padding: const EdgeInsets.only(left: 18),
+              child: const Text('Welcome Back', 
+              style: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Color(0XFF000000),
+              ),
+              ),
             ),
+            const SizedBox(height: 5),
+            Padding(
+              padding: const EdgeInsets.only(left: 20),
+              child: const Text('Hello there Sign Up to continue...', 
+              style: TextStyle(
+                fontFamily: 'RalewayReg',
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Color(0xff000000),
+              ),
+              ),
             ),
             Container(
               margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
@@ -245,7 +255,7 @@ class LoginPage extends StatelessWidget {
       body: Column(
           children: <Widget>[
             const SizedBox(height: 40),
-            const Text('LOGIN!', 
+            const Text('LOG IN!', 
             style: TextStyle(
               fontFamily: 'Lato',
               fontSize: 30,
