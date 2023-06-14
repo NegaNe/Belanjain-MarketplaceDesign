@@ -141,6 +141,16 @@ class _HomePageState extends State<HomePage> {
               controller: _password,
               obscureText: true,
             ),
+            const SizedBox(height: 5),
+            TextField(
+              decoration: const InputDecoration(
+                hintText: ('Confirm Password'),
+                contentPadding: EdgeInsets.all(25),
+                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
+              ),
+              controller: _password,
+              obscureText: true,
+            ),
             const SizedBox(height: 25),
             TextButton(
                 onPressed: () {},
