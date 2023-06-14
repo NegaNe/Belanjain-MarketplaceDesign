@@ -157,12 +157,18 @@ class _HomePageState extends State<HomePage> {
               ),
             TextButton(
               style: ButtonStyle(
-                backgroundColor: MaterialStatePropertyAll(Color(0XFF6D6E4C)),
+                foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+                backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(7),
+              ),
+                ),
               ),
                 onPressed: () {},
                 child: const Column(
-                  //Widthnya gw bikin manual -kf kiri kanan tab 21x
-                  children: [Text('                                        SIGN UP                                         ',
+                  //Widthnya gw bikin manual -kf kiri kanan tab 22x
+                  children: [Text('                                          SIGN UP                                           ',
                   style: TextStyle(
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w900,
