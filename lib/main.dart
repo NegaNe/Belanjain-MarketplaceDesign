@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
               )),
             const SizedBox(height: 5),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 10, 15, 15),
+              margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -192,7 +192,7 @@ class _HomePageState extends State<HomePage> {
                     color: Color(0xffFFFFFF),
                   ))],
                 )),
-            const SizedBox(height: 25),
+            const SizedBox(height: 1),
             TextButton(
                 onPressed: () {
                   Navigator.pushNamed(context, '/login');
