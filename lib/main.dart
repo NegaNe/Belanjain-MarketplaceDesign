@@ -184,8 +184,8 @@ class _HomePageState extends State<HomePage> {
               ),
                 onPressed: () {},
                 child: const Column(
-                  //Widthnya gw bikin manual -kf kiri kanan tab 25x
-                  children: [Text('                                                SIGN UP                                                ',
+                  //Widthnya gw bikin manual -kf kiri kanan tab 26x
+                  children: [Text('                                                 SIGN UP                                                  ',
                   style: TextStyle(
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w900,
@@ -214,14 +214,31 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        centerTitle: true,
+        backgroundColor: Color(0XFFFFFFFF),
+        title: const Text('B E L A N J A I N',
+        style: TextStyle(
+          fontFamily: 'Lato', 
+          fontSize: 35,
+          fontWeight: FontWeight.w900,
+          //tambahin 0XFF kalau mau ganti warna pake hex code
+          color: Color(0XFF6D6E4C),
+          ),
+          ),
       ),
       body: Column(
-        children: [
-          Text('Some Login Text :)'),
+          children: <Widget>[
+            const SizedBox(height: 40),
+            const Text('LOGIN!', 
+            style: TextStyle(
+              fontFamily: 'Lato',
+              fontSize: 30,
+              fontWeight: FontWeight.w900,
+              color: Color(0XFF6D6E4C)
+            ),
+            ),
           const TextField(
             decoration: InputDecoration(
-              hintText: ('ENTER EMAIL'),
             ),
           ),
           Container(
@@ -258,11 +275,25 @@ class LoginPage extends StatelessWidget {
               )),
             Container(
               child: TextButton(
+                style: ButtonStyle(
+                foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+                backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+            RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(7),
+              ),
+                ),
+              ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/');
                 },
                 child: const Column(
-                  
+                  children: [Text('                                                 LOGIN                                                  ',
+                  style: TextStyle(
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xffFFFFFF),
+                  ))],
                 )),
             )
         ],
