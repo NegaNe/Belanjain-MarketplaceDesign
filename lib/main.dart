@@ -119,6 +119,24 @@ class _HomePageState extends State<HomePage> {
               color: Color(0XFF6D6E4C)
             ),
             ),
+            const SizedBox(height: 1),
+            const Text('Welcome Back', 
+            style: TextStyle(
+              fontFamily: 'Raleway',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Color(0XFF000000),
+            ),
+            ),
+            const SizedBox(height: 1),
+            const Text('Hello there Sign Up to continue...', 
+            style: TextStyle(
+              fontFamily: 'RalewayRef',
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: Color(0xff000000),
+            ),
+            ),
             Container(
               margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
               decoration: BoxDecoration(
