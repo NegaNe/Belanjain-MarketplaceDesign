@@ -151,11 +151,23 @@ class _HomePageState extends State<HomePage> {
               controller: _password,
               obscureText: true,
             ),
-            const SizedBox(height: 25),
+            const SizedBox(
+            width: 100,
+            height: 20,
+              ),
             TextButton(
+              style: ButtonStyle(
+                backgroundColor: MaterialStatePropertyAll(Color(0XFF6D6E4C)),
+              ),
                 onPressed: () {},
                 child: const Column(
-                  children: [Text('Sign Up')],
+                  //Widthnya gw bikin manual -kf kiri kanan tab 21x
+                  children: [Text('                                        SIGN UP                                         ',
+                  style: TextStyle(
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xffFFFFFF),
+                  ))],
                 )),
             const SizedBox(height: 25),
             TextButton(
