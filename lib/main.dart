@@ -107,8 +107,7 @@ class _HomePageState extends State<HomePage> {
           ),
           ),
       ),
-      body: Center(
-        child: Column(
+      body: Column(
           children: <Widget>[
             const SizedBox(height: 40),
             const Text('SIGN UP!', 
@@ -131,9 +130,9 @@ class _HomePageState extends State<HomePage> {
             const SizedBox(height: 1),
             const Text('Hello there Sign Up to continue...', 
             style: TextStyle(
-              fontFamily: 'RalewayRef',
+              fontFamily: 'RalewayReg',
               fontSize: 12,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               color: Color(0xff000000),
             ),
             ),
@@ -220,7 +219,6 @@ class _HomePageState extends State<HomePage> {
                 ))
           ],
         ),
-      ),
     );
   }
 }
@@ -253,6 +251,24 @@ class LoginPage extends StatelessWidget {
               fontSize: 30,
               fontWeight: FontWeight.w900,
               color: Color(0XFF6D6E4C)
+            ),
+            ),
+            const SizedBox(height: 1),
+            const Text('Welcome Back', 
+            style: TextStyle(
+              fontFamily: 'Raleway',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Color(0XFF000000),
+            ),
+            ),
+            const SizedBox(height: 1),
+            const Text('Hello there Log in to continue...', 
+            style: TextStyle(
+              fontFamily: 'RalewayReg',
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: Color(0xff000000),
             ),
             ),
           const TextField(
