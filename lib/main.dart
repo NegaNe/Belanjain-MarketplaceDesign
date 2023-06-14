@@ -120,7 +120,7 @@ class _HomePageState extends State<HomePage> {
             ),
             ),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
+              margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -136,7 +136,7 @@ class _HomePageState extends State<HomePage> {
                 obscureText: true,
               )),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -153,7 +153,7 @@ class _HomePageState extends State<HomePage> {
               )),
             const SizedBox(height: 5),
             Container(
-              margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
+              margin: EdgeInsets.fromLTRB(15, 10, 15, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -184,8 +184,8 @@ class _HomePageState extends State<HomePage> {
               ),
                 onPressed: () {},
                 child: const Column(
-                  //Widthnya gw bikin manual -kf kiri kanan tab 22x
-                  children: [Text('                                          SIGN UP                                           ',
+                  //Widthnya gw bikin manual -kf kiri kanan tab 25x
+                  children: [Text('                                                SIGN UP                                                ',
                   style: TextStyle(
                     fontFamily: 'Lato',
                     fontWeight: FontWeight.w900,
