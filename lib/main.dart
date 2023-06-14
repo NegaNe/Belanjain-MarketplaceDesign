@@ -119,38 +119,55 @@ class _HomePageState extends State<HomePage> {
               color: Color(0XFF6D6E4C)
             ),
             ),
-            const SizedBox(
-              width: 50,
-              height: 25,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: ('Email Address'),
-                contentPadding: EdgeInsets.all(25),
-                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
               ),
-              controller: _email,
-            ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
             const SizedBox(height: 5),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: ('Password'),
-                contentPadding: EdgeInsets.all(25),
-                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
+            Container(
+              margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
               ),
-              controller: _password,
-              obscureText: true,
-            ),
-            const SizedBox(height: 5),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: ('Confirm Password'),
-                contentPadding: EdgeInsets.all(25),
-                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
-              ),
-              controller: _password,
-              obscureText: true,
-            ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Confirm Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
             const SizedBox(
             width: 100,
             height: 20,
@@ -245,7 +262,7 @@ class LoginPage extends StatelessWidget {
                   Navigator.pushNamed(context, '/');
                 },
                 child: const Column(
-                  children: [Text('Login')],
+                  
                 )),
             )
         ],
