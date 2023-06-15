@@ -96,58 +96,61 @@ class _HomePageState extends State<HomePage> {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0XFFFFFFFF),
-        title: const Text('B E L A N J A I N',
-        style: TextStyle(
-          fontFamily: 'Lato', 
-          fontSize: 35,
-          fontWeight: FontWeight.w900,
-          //tambahin 0XFF kalau mau ganti warna pake hex code
-          color: Color(0XFF6D6E4C),
+        backgroundColor: const Color(0XFFFFFFFF),
+        title: const Text(
+          'B E L A N J A I N',
+          style: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 35,
+            fontWeight: FontWeight.w900,
+            //tambahin 0XFF kalau mau ganti warna pake hex code
+            color: Color(0XFF6D6E4C),
           ),
-          ),
+        ),
       ),
       body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-          children: <Widget>[
-            const SizedBox(height: 40),
-            Padding(
-              padding: const EdgeInsets.only(left: 18),
-              child: const Text('SIGN UP!', 
+        children: <Widget>[
+          const SizedBox(height: 40),
+          const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'SIGN UP!',
               style: TextStyle(
-                fontFamily: 'Lato',
-                fontSize: 30,
-                fontWeight: FontWeight.w900,
-                color: Color(0XFF6D6E4C)
-              ),
-              ),
+                  fontFamily: 'Lato',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0XFF6D6E4C)),
             ),
-            const SizedBox(height: 1),
-            Padding(
-              padding: const EdgeInsets.only(left: 18),
-              child: const Text('Welcome Back', 
+          ),
+          const SizedBox(height: 1),
+          const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'Welcome Back',
               style: TextStyle(
                 fontFamily: 'Raleway',
                 fontSize: 15,
                 fontWeight: FontWeight.w800,
                 color: Color(0XFF000000),
               ),
-              ),
             ),
-            const SizedBox(height: 5),
-            Padding(
-              padding: const EdgeInsets.only(left: 20),
-              child: const Text('Hello there Sign Up to continue...', 
+          ),
+          const SizedBox(height: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              'Hello there Sign Up to continue...',
               style: TextStyle(
                 fontFamily: 'RalewayReg',
                 fontSize: 12,
                 fontWeight: FontWeight.w500,
                 color: Color(0xff000000),
               ),
-              ),
             ),
-            Container(
-              margin: EdgeInsets.fromLTRB(15, 15, 15, 15),
+          ),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -162,8 +165,8 @@ class _HomePageState extends State<HomePage> {
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
                 obscureText: true,
               )),
-            Container(
-              margin: EdgeInsets.fromLTRB(15, 10, 15, 15),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 10, 15, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -178,9 +181,9 @@ class _HomePageState extends State<HomePage> {
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
                 obscureText: true,
               )),
-            const SizedBox(height: 5),
-            Container(
-              margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
+          const SizedBox(height: 5),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 5, 15, 5),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -195,40 +198,85 @@ class _HomePageState extends State<HomePage> {
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
                 obscureText: true,
               )),
-            const SizedBox(
+          const SizedBox(
             width: 100,
             height: 20,
-              ),
-            TextButton(
-              style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-                backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(7),
-              ),
+          ),
+          // TextButton(
+          //   style: ButtonStyle(
+          //     foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+          //     backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+          //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          // RoundedRectangleBorder(
+          //   borderRadius: BorderRadius.circular(7),
+          //   ),
+          //     ),
+          //   ),
+          //     onPressed: () {},
+          //     child: const Column(
+          //       //Widthnya gw bikin manual -kf kiri kanan tab 26x
+
+          //       children: [
+
+          //       Text('                                                 SIGN UP                                                  ',
+          //       style: TextStyle(
+          //         fontFamily: 'Lato',
+          //         fontWeight: FontWeight.w900,
+          //         color: Color(0xffFFFFFF),
+          //       )
+          //       )
+          //       ],
+          //     )
+          //     ),
+
+          Container(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0XFF6D6E4C)),
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(75, 5, 75, 5),
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
                 ),
               ),
-                onPressed: () {},
-                child: const Column(
-                  //Widthnya gw bikin manual -kf kiri kanan tab 26x
-                  children: [Text('                                                 SIGN UP                                                  ',
-                  style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w900,
-                    color: Color(0xffFFFFFF),
-                  ))],
-                )),
-            const SizedBox(height: 1),
-            TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login');
-                },
-                child: const Column(
-                  children: [Text('Already have Account? Login')],
-                ))
-          ],
-        ),
+            ),
+          ),
+
+          const SizedBox(height: 1),
+          // TextButton(
+          //     // style: ButtonStyle(alignment: Alignment.center),
+          //     onPressed: () {
+          //       Navigator.pushNamed(context, '/login');
+          //     },
+          //     child: const Column(
+          //       children: [
+          //         Text(
+          //           'Already have Account? Login',
+          //           textAlign: TextAlign.center,
+          //         ),
+          //       ],
+          //     )
+          //     )
+
+          TextButton(
+              onPressed: () {},
+              child: Column(
+                children: [
+                  const Align(
+                    alignment: Alignment.center,
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text("Already Have an Account? Login Here"))
+                ],
+              )),
+        ],
+      ),
     );
   }
 }
@@ -241,52 +289,54 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: Color(0XFFFFFFFF),
-        title: const Text('B E L A N J A I N',
-        style: TextStyle(
-          fontFamily: 'Lato', 
-          fontSize: 35,
-          fontWeight: FontWeight.w900,
-          //tambahin 0XFF kalau mau ganti warna pake hex code
-          color: Color(0XFF6D6E4C),
+        backgroundColor: const Color(0XFFFFFFFF),
+        title: const Text(
+          'B E L A N J A I N',
+          style: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 35,
+            fontWeight: FontWeight.w900,
+            //tambahin 0XFF kalau mau ganti warna pake hex code
+            color: Color(0XFF6D6E4C),
           ),
-          ),
+        ),
       ),
       body: Column(
-          children: <Widget>[
-            const SizedBox(height: 40),
-            const Text('LOG IN!', 
+        children: <Widget>[
+          const SizedBox(height: 40),
+          const Text(
+            'LOG IN!',
             style: TextStyle(
-              fontFamily: 'Lato',
-              fontSize: 30,
-              fontWeight: FontWeight.w900,
-              color: Color(0XFF6D6E4C)
-            ),
-            ),
-            const SizedBox(height: 1),
-            const Text('Welcome Back', 
+                fontFamily: 'Lato',
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+                color: Color(0XFF6D6E4C)),
+          ),
+          const SizedBox(height: 1),
+          const Text(
+            'Welcome Back',
             style: TextStyle(
               fontFamily: 'Raleway',
               fontSize: 15,
               fontWeight: FontWeight.w800,
               color: Color(0XFF000000),
             ),
-            ),
-            const SizedBox(height: 1),
-            const Text('Hello there Log in to continue...', 
+          ),
+          const SizedBox(height: 1),
+          const Text(
+            'Hello there Log in to continue...',
             style: TextStyle(
               fontFamily: 'RalewayReg',
               fontSize: 12,
               fontWeight: FontWeight.w500,
               color: Color(0xff000000),
             ),
-            ),
+          ),
           const TextField(
-            decoration: InputDecoration(
-            ),
+            decoration: InputDecoration(),
           ),
           Container(
-              margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
+              margin: const EdgeInsets.fromLTRB(15, 25, 25, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -302,12 +352,12 @@ class LoginPage extends StatelessWidget {
                 obscureText: true,
               )),
           Container(
-            margin: EdgeInsets.fromLTRB(15, 10, 25, 15),
-            decoration: BoxDecoration(
+              margin: const EdgeInsets.fromLTRB(15, 10, 25, 15),
+              decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
                 border: Border.all(color: Colors.grey),
-            ),
+              ),
               child: TextFormField(
                 decoration: const InputDecoration(
                     border: InputBorder.none,
@@ -317,29 +367,34 @@ class LoginPage extends StatelessWidget {
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
                 obscureText: true,
               )),
-            Container(
-              child: TextButton(
+          Container(
+            child: TextButton(
                 style: ButtonStyle(
-                foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-                backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-            RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(7),
-              ),
+                  foregroundColor:
+                      MaterialStateProperty.all<Color>(const Color(0XFF6D6E4C)),
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(const Color(0XFF6D6E4C)),
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(7),
+                    ),
+                  ),
                 ),
-              ),
                 onPressed: () {
                   Navigator.pushNamed(context, '/');
                 },
                 child: const Column(
-                  children: [Text('                                                 LOGIN                                                  ',
-                  style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w900,
-                    color: Color(0xffFFFFFF),
-                  ))],
+                  children: [
+                    Text(
+                        '                                                 LOGIN                                                  ',
+                        style: TextStyle(
+                          fontFamily: 'Lato',
+                          fontWeight: FontWeight.w900,
+                          color: Color(0xffFFFFFF),
+                        ))
+                  ],
                 )),
-            )
+          )
         ],
       ),
     );
