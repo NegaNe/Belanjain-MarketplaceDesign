@@ -123,6 +123,7 @@ class _HomePageState extends State<HomePage> {
               ),
               controller: _password,
             ),
+<<<<<<< Updated upstream
             const SizedBox(height: 25),
             TextButton(
                 onPressed: () {},
@@ -139,6 +140,139 @@ class _HomePageState extends State<HomePage> {
                 ))
           ],
         ),
+=======
+          ),
+          const SizedBox(height: 50),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 10, 15, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+          const SizedBox(height: 5),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 5, 15, 5),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Confirm Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+          const SizedBox(
+            width: 100,
+            height: 25,
+          ),
+          // TextButton(
+          //   style: ButtonStyle(
+          //     foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+          //     backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
+          //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          // RoundedRectangleBorder(
+          //   borderRadius: BorderRadius.circular(7),
+          //   ),
+          //     ),
+          //   ),
+          //     onPressed: () {},
+          //     child: const Column(
+          //       //Widthnya gw bikin manual -kf kiri kanan tab 26x
+
+          //       children: [
+
+          //       Text('                                                 SIGN UP                                                  ',
+          //       style: TextStyle(
+          //         fontFamily: 'Lato',
+          //         fontWeight: FontWeight.w900,
+          //         color: Color(0xffFFFFFF),
+          //       )
+          //       )
+          //       ],
+          //     )
+          //     ),
+
+          Container(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0XFF6D6E4C)),
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(75, 5, 75, 5),
+                child: Text(
+                  "Sign Up",
+                  style: TextStyle(
+                    color: Colors.black,
+                  ),
+                ),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 5),
+          // TextButton(
+          //     // style: ButtonStyle(alignment: Alignment.center),
+          //     onPressed: () {
+          //       Navigator.pushNamed(context, '/login');
+          //     },
+          //     child: const Column(
+          //       children: [
+          //         Text(
+          //           'Already have Account? Login',
+          //           textAlign: TextAlign.center,
+          //         ),
+          //       ],
+          //     )
+          //     )
+
+          TextButton(
+              onPressed: () {},
+              child: Column(
+                children: [
+                  const Align(
+                    alignment: Alignment.center,
+                  ),
+                  TextButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/login');
+                      },
+                      child: const Text("Already Have an Account? Login Here"))
+                ],
+              )),
+        ],
+>>>>>>> Stashed changes
       ),
     );
   }
@@ -176,6 +310,77 @@ class LoginPage extends StatelessWidget {
                     labelStyle: TextStyle(color: Colors.black),
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
               )),
+<<<<<<< Updated upstream
+=======
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 10, 25, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Enter Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+
+          Container(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ButtonStyle(
+                backgroundColor:
+                    const MaterialStatePropertyAll(Color(0XFF6D6E4C)),
+                shape: MaterialStatePropertyAll<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(10),
+                )),
+              ),
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(125, 5, 125, 5),
+                child: Text(
+                  "Login",
+                  style: TextStyle(
+                    fontSize: 16,
+                    color: Colors.white,
+                  ),
+                ),
+              ),
+            ),
+          ),
+          // TextButton(
+          //     style: ButtonStyle(
+          //       foregroundColor:
+          //           MaterialStateProperty.all<Color>(const Color(0XFF6D6E4C)),
+          //       backgroundColor:
+          //           MaterialStateProperty.all<Color>(const Color(0XFF6D6E4C)),
+          //       shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+          //         RoundedRectangleBorder(
+          //           borderRadius: BorderRadius.circular(7),
+          //         ),
+          //       ),
+          //     ),
+
+          //     onPressed: () {
+          //       Navigator.pushNamed(context, '/');
+          //     },
+          //     child: const Column(
+          //       children: [
+          //         Text(
+          //             '                                                 LOGIN                                                  ',
+          //             style: TextStyle(
+          //               fontFamily: 'Lato',
+          //               fontWeight: FontWeight.w900,
+          //               color: Color(0xffFFFFFF),
+          //             ))
+          //       ],
+          //     )),
+>>>>>>> Stashed changes
         ],
       ),
     );
