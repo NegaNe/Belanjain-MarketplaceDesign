@@ -26,46 +26,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-// class HomePage extends StatefulWidget {
-//   const HomePage({super.key});
-
-//   @override
-//   State<HomePage> createState() => _HomePageState();
-// }
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//         appBar: AppBar(title: const Text('Register')),
-//         body: Column(
-//           children: [
-//             const Text('Email'),
-//             TextField(
-//               controller: _email,
-//               decoration: const InputDecoration(
-//                   hintText: 'Enter Email',
-//                   hintStyle: TextStyle(
-//                     color: Colors.green,
-//                     fontSize: 16,
-//                   ),
-//                   border: OutlineInputBorder(
-//                       borderRadius:
-//                           BorderRadius.all(Radius.elliptical(10, 10)))),
-//             ),
-//             const Text('Password'),
-//             TextField(
-//               controller: _password,
-//               decoration: const InputDecoration(hintText: 'Enter Password'),
-//             ),
-//             TextButton(
-//               onPressed: () async {},
-//               child: const Text('Register'),
-//             )
-//           ],
-//         ));
-//   }
-// }
-
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
 
@@ -203,32 +163,6 @@ class _HomePageState extends State<HomePage> {
             width: 100,
             height: 25,
           ),
-          // TextButton(
-          //   style: ButtonStyle(
-          //     foregroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-          //     backgroundColor: MaterialStateProperty.all<Color>(Color(0XFF6D6E4C)),
-          //     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-          // RoundedRectangleBorder(
-          //   borderRadius: BorderRadius.circular(7),
-          //   ),
-          //     ),
-          //   ),
-          //     onPressed: () {},
-          //     child: const Column(
-          //       //Widthnya gw bikin manual -kf kiri kanan tab 26x
-
-          //       children: [
-
-          //       Text('                                                 SIGN UP                                                  ',
-          //       style: TextStyle(
-          //         fontFamily: 'Lato',
-          //         fontWeight: FontWeight.w900,
-          //         color: Color(0xffFFFFFF),
-          //       )
-          //       )
-          //       ],
-          //     )
-          //     ),
 
           Container(
             alignment: Alignment.center, 
@@ -251,22 +185,6 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          const SizedBox(height: 5),
-          // TextButton(
-          //     // style: ButtonStyle(alignment: Alignment.center),
-          //     onPressed: () {
-          //       Navigator.pushNamed(context, '/login');
-          //     },
-          //     child: const Column(
-          //       children: [
-          //         Text(
-          //           'Already have Account? Login',
-          //           textAlign: TextAlign.center,
-          //         ),
-          //       ],
-          //     )
-          //     )
-
           TextButton(
               onPressed: () {},
               child: Column(
@@ -278,7 +196,14 @@ class _HomePageState extends State<HomePage> {
                       onPressed: () {
                           Navigator.pushNamed(context, '/login');
                       },
-                      child: const Text("Already Have an Account? Login Here"))
+                      child: const Text("Already have an account? Login",
+                        style: TextStyle(
+                          fontFamily: 'RalewayReg',
+                          fontWeight: FontWeight.w600,
+                          color: Color(0XFF6D6E4C),
+                  ),
+                      ),
+                      )
                 ],
               )),
         ],
@@ -302,7 +227,6 @@ class LoginPage extends StatelessWidget {
             fontFamily: 'Lato',
             fontSize: 35,
             fontWeight: FontWeight.w900,
-            //tambahin 0XFF kalau mau ganti warna pake hex code
             color: Color(0XFF6D6E4C),
           ),
         ),
@@ -381,6 +305,11 @@ class LoginPage extends StatelessWidget {
                   contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
               obscureText: true,
             )),
+        const SizedBox(
+            width: 100,
+            height: 17,
+          ),
+
         Container(
             alignment: Alignment.center, 
             child: ElevatedButton(
@@ -388,10 +317,10 @@ class LoginPage extends StatelessWidget {
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(9.0)), backgroundColor: Color(0XFF6D6E4C)),
               onPressed: () {
-                Navigator.pushNamed(context, '/');
+                // Navigator.pushNamed(context, '/');
               },
               child: const Padding(
-                padding: EdgeInsets.fromLTRB(132, 5, 132, 5),
+                padding: EdgeInsets.fromLTRB(133, 5, 133, 5),
                 child: Text(
                   "LOG IN",
                   style: TextStyle(
@@ -403,6 +332,28 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 5),
+          TextButton(
+              onPressed: () {},
+              child: Column(
+                children: [
+                  const Align(
+                    alignment: Alignment.center,
+                  ),
+                  TextButton(
+                      onPressed: () {
+                          Navigator.pushNamed(context, '/');
+                      },
+                      child: const Text("Need an account? Register",
+                        style: TextStyle(
+                          fontFamily: 'RalewayReg',
+                          fontWeight: FontWeight.w600,
+                          color: Color(0XFF6D6E4C),
+                  ),
+                      ),
+                      )
+                ],
+              )),
         ],
       ),
     );
