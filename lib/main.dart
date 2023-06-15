@@ -95,52 +95,59 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Belanjain'),
-      ),
-      body: Center(
-        child: Column(
-          children: <Widget>[
-            const SizedBox(height: 50),
-            const Text('Sign Up!'),
-            const SizedBox(
-              width: 50,
-              height: 25,
-            ),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: ('Email Address'),
-                contentPadding: EdgeInsets.all(25),
-                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
-              ),
-              controller: _email,
-            ),
-            const SizedBox(height: 5),
-            TextField(
-              decoration: const InputDecoration(
-                hintText: ('Password'),
-                contentPadding: EdgeInsets.all(25),
-                border: OutlineInputBorder(borderSide: BorderSide(width: 2.0)),
-              ),
-              controller: _password,
-            ),
-<<<<<<< Updated upstream
-            const SizedBox(height: 25),
-            TextButton(
-                onPressed: () {},
-                child: const Column(
-                  children: [Text('Register')],
-                )),
-            const SizedBox(height: 25),
-            TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/login');
-                },
-                child: const Column(
-                  children: [Text('Login')],
-                ))
-          ],
+        centerTitle: true,
+        backgroundColor: const Color(0XFFFFFFFF),
+        title: const Text(
+          'B E L A N J A I N',
+          style: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 35,
+            fontWeight: FontWeight.w900,
+            //tambahin 0XFF kalau mau ganti warna pake hex code
+            color: Color(0XFF6D6E4C),
+          ),
         ),
-=======
+      ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          const SizedBox(height: 40),
+          const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'SIGN UP!',
+              style: TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0XFF6D6E4C)),
+            ),
+          ),
+          const SizedBox(height: 1),
+          const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'Welcome Back',
+              style: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Color(0XFF000000),
+              ),
+            ),
+          ),
+          const SizedBox(height: 5),
+          const Padding(
+            padding: EdgeInsets.only(left: 20),
+            child: Text(
+              'Hello there Sign Up to continue...',
+              style: TextStyle(
+                fontFamily: 'RalewayReg',
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: Color(0xff000000),
+              ),
+            ),
           ),
           const SizedBox(height: 50),
           Container(
@@ -272,7 +279,6 @@ class _HomePageState extends State<HomePage> {
                 ],
               )),
         ],
->>>>>>> Stashed changes
       ),
     );
   }
@@ -285,18 +291,55 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Login'),
+        centerTitle: true,
+        backgroundColor: const Color(0XFFFFFFFF),
+        title: const Text(
+          'B E L A N J A I N',
+          style: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 35,
+            fontWeight: FontWeight.w900,
+            //tambahin 0XFF kalau mau ganti warna pake hex code
+            color: Color(0XFF6D6E4C),
+          ),
+        ),
       ),
       body: Column(
-        children: [
-          Text('Some Login Text :)'),
-          const TextField(
-            decoration: InputDecoration(
-              hintText: ('ENTER EMAIL'),
+        children: <Widget>[
+          const SizedBox(height: 40),
+          const Text(
+            'LOG IN!',
+            style: TextStyle(
+                fontFamily: 'Lato',
+                fontSize: 30,
+                fontWeight: FontWeight.w900,
+                color: Color(0XFF6D6E4C)),
+          ),
+          const SizedBox(height: 1),
+          const Text(
+            'Welcome Back',
+            style: TextStyle(
+              fontFamily: 'Raleway',
+              fontSize: 15,
+              fontWeight: FontWeight.w800,
+              color: Color(0XFF000000),
             ),
           ),
+          const SizedBox(height: 1),
+          const Text(
+            'Hello there Log in to continue...',
+            style: TextStyle(
+              fontFamily: 'RalewayReg',
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: Color(0xff000000),
+            ),
+          ),
+          const TextField(
+            decoration: InputDecoration(),
+          ),
           Container(
-              margin: EdgeInsets.fromLTRB(15, 25, 25, 15),
+              margin: const EdgeInsets.fromLTRB(15, 25, 25, 15),
               decoration: BoxDecoration(
                 color: Colors.grey,
                 borderRadius: BorderRadius.circular(15),
@@ -309,9 +352,8 @@ class LoginPage extends StatelessWidget {
                     labelText: 'Enter Email',
                     labelStyle: TextStyle(color: Colors.black),
                     contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
               )),
-<<<<<<< Updated upstream
-=======
           Container(
               margin: const EdgeInsets.fromLTRB(15, 10, 25, 15),
               decoration: BoxDecoration(
@@ -380,7 +422,6 @@ class LoginPage extends StatelessWidget {
           //             ))
           //       ],
           //     )),
->>>>>>> Stashed changes
         ],
       ),
     );
