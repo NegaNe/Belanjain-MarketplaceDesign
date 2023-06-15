@@ -235,7 +235,9 @@ class _HomePageState extends State<HomePage> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                   backgroundColor: const Color(0XFF6D6E4C)),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(75, 5, 75, 5),
                 child: Text(
@@ -382,7 +384,9 @@ class LoginPage extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 )),
               ),
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, '/');
+              },
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(125, 5, 125, 5),
                 child: Text(
