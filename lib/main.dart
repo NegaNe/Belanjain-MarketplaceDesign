@@ -149,6 +149,7 @@ class _HomePageState extends State<HomePage> {
               ),
             ),
           ),
+          const SizedBox(height: 25),
           Container(
               margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
               decoration: BoxDecoration(
@@ -200,7 +201,7 @@ class _HomePageState extends State<HomePage> {
               )),
           const SizedBox(
             width: 100,
-            height: 20,
+            height: 25,
           ),
           // TextButton(
           //   style: ButtonStyle(
@@ -247,7 +248,7 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          const SizedBox(height: 1),
+          const SizedBox(height: 5),
           // TextButton(
           //     // style: ButtonStyle(alignment: Alignment.center),
           //     onPressed: () {
