@@ -332,7 +332,6 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
-          const SizedBox(height: 5),
           TextButton(
               onPressed: () {},
               child: Column(
