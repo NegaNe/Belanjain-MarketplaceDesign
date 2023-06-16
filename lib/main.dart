@@ -17,6 +17,7 @@ class MyApp extends StatelessWidget {
       routes: {
         '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
+        '/productPage': (context) => const ProductPage(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -194,7 +195,7 @@ class _HomePageState extends State<HomePage> {
                   ),
                   TextButton(
                       onPressed: () {
-                          Navigator.pushNamed(context, '/login');
+                          Navigator.pushNamed(context, '/productPage');
                       },
                       child: const Text("Already have an account? Login",
                         style: TextStyle(
@@ -356,5 +357,59 @@ class LoginPage extends StatelessWidget {
         ],
       ),
     );
+  }
+}
+
+class ProductPage extends StatelessWidget {
+  const ProductPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: const Color(0XFFFFFFFF),
+        title: const Text(
+          'GAMBAR',
+          style: TextStyle(
+            fontFamily: 'Lato',
+            fontSize: 35,
+            fontWeight: FontWeight.w900,
+            //tambahin 0XFF kalau mau ganti warna pake hex code
+            color: Color(0XFF6D6E4C),
+            ),
+          ),
+        ),
+      body: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          const SizedBox(height: 40),
+          const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'LOG IN!',
+              style: TextStyle(
+                  fontFamily: 'Lato',
+                  fontSize: 30,
+                  fontWeight: FontWeight.w900,
+                  color: Color(0XFF6D6E4C)),
+            ),
+          ),
+         
+         const Padding(
+            padding: EdgeInsets.only(left: 18),
+            child: Text(
+              'Welcome Back',
+              style: TextStyle(
+                fontFamily: 'Raleway',
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: Color(0XFF000000),
+              ),
+            ),
+          ),
+          ],
+     ),
+      );
   }
 }
