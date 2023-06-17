@@ -169,7 +169,7 @@ class _HomePageState extends State<HomePage> {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: Color(0XFF6D6E4C)),
+                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: const Color(0XFF6D6E4C)),
               onPressed: () {},
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(128, 5, 128, 5),
@@ -315,7 +315,7 @@ class LoginPage extends StatelessWidget {
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: Color(0XFF6D6E4C)),
+                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: const Color(0XFF6D6E4C)),
               onPressed: () {
                 // Navigator.pushNamed(context, '/');
               },
