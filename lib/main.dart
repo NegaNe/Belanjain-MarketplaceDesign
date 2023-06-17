@@ -12,12 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       initialRoute: '/',
       routes: {
         '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
-        '/productPage': (context) => const ProductPage(),
+        '/setting': (context) => const Setting(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
@@ -164,28 +165,27 @@ class _HomePageState extends State<HomePage> {
             width: 100,
             height: 25,
           ),
-
           Container(
-            alignment: Alignment.center, 
+            alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: Color(0XFF6D6E4C)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(9.0)),
+                  backgroundColor: Color(0XFF6D6E4C)),
               onPressed: () {},
               child: const Padding(
                 padding: EdgeInsets.fromLTRB(128, 5, 128, 5),
                 child: Text(
                   "SIGN UP",
                   style: TextStyle(
-                  fontFamily: 'Lato',
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xffFFFFFF),
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xffFFFFFF),
                   ),
                 ),
               ),
             ),
           ),
-
           TextButton(
               onPressed: () {},
               child: Column(
@@ -194,17 +194,18 @@ class _HomePageState extends State<HomePage> {
                     alignment: Alignment.center,
                   ),
                   TextButton(
-                      onPressed: () {
-                          Navigator.pushNamed(context, '/productPage');
-                      },
-                      child: const Text("Already have an account? Login",
-                        style: TextStyle(
-                          fontFamily: 'RalewayReg',
-                          fontWeight: FontWeight.w600,
-                          color: Color(0XFF6D6E4C),
-                  ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/setting');
+                    },
+                    child: const Text(
+                      "Already have an account? Login",
+                      style: TextStyle(
+                        fontFamily: 'RalewayReg',
+                        fontWeight: FontWeight.w600,
+                        color: Color(0XFF6D6E4C),
                       ),
-                      )
+                    ),
+                  )
                 ],
               )),
         ],
@@ -232,7 +233,7 @@ class LoginPage extends StatelessWidget {
           ),
         ),
       ),
-    body: Column(
+      body: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
           const SizedBox(height: 40),
@@ -273,50 +274,50 @@ class LoginPage extends StatelessWidget {
               ),
             ),
           ),
-        const SizedBox(height: 25),
-        Container(
-            margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(15),
-              border: Border.all(color: Colors.grey),
-            ),
-            child: TextFormField(
-              decoration: const InputDecoration(
-                  border: InputBorder.none,
-                  hintStyle: TextStyle(color: Colors.black),
-                  labelText: 'Email',
-                  labelStyle: TextStyle(color: Colors.black),
-                  contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
-              obscureText: true,
-            )),
-        Container(
-            margin: const EdgeInsets.fromLTRB(15, 10, 15, 15),
-            decoration: BoxDecoration(
-              color: Colors.grey,
-              borderRadius: BorderRadius.circular(15),
-              border: Border.all(color: Colors.grey),
-            ),
-            child: TextFormField(
-              decoration: const InputDecoration(
-                  border: InputBorder.none,
-                  hintStyle: TextStyle(color: Colors.black),
-                  labelText: 'Password',
-                  labelStyle: TextStyle(color: Colors.black),
-                  contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
-              obscureText: true,
-            )),
-        const SizedBox(
+          const SizedBox(height: 25),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 15, 15, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Email',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+          Container(
+              margin: const EdgeInsets.fromLTRB(15, 10, 15, 15),
+              decoration: BoxDecoration(
+                color: Colors.grey,
+                borderRadius: BorderRadius.circular(15),
+                border: Border.all(color: Colors.grey),
+              ),
+              child: TextFormField(
+                decoration: const InputDecoration(
+                    border: InputBorder.none,
+                    hintStyle: TextStyle(color: Colors.black),
+                    labelText: 'Password',
+                    labelStyle: TextStyle(color: Colors.black),
+                    contentPadding: EdgeInsets.fromLTRB(20, 5, 20, 5)),
+                obscureText: true,
+              )),
+          const SizedBox(
             width: 100,
             height: 17,
           ),
-
-        Container(
-            alignment: Alignment.center, 
+          Container(
+            alignment: Alignment.center,
             child: ElevatedButton(
               style: ElevatedButton.styleFrom(
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(9.0)), backgroundColor: Color(0XFF6D6E4C)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(9.0)),
+                  backgroundColor: Color(0XFF6D6E4C)),
               onPressed: () {
                 // Navigator.pushNamed(context, '/');
               },
@@ -325,9 +326,9 @@ class LoginPage extends StatelessWidget {
                 child: Text(
                   "LOG IN",
                   style: TextStyle(
-                  fontFamily: 'Lato',
-                  fontWeight: FontWeight.w900,
-                  color: Color(0xffFFFFFF),
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w900,
+                    color: Color(0xffFFFFFF),
                   ),
                 ),
               ),
@@ -341,17 +342,18 @@ class LoginPage extends StatelessWidget {
                     alignment: Alignment.center,
                   ),
                   TextButton(
-                      onPressed: () {
-                          Navigator.pushNamed(context, '/');
-                      },
-                      child: const Text("Need an account? Register",
-                        style: TextStyle(
-                          fontFamily: 'RalewayReg',
-                          fontWeight: FontWeight.w600,
-                          color: Color(0XFF6D6E4C),
-                  ),
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: const Text(
+                      "Need an account? Register",
+                      style: TextStyle(
+                        fontFamily: 'RalewayReg',
+                        fontWeight: FontWeight.w600,
+                        color: Color(0XFF6D6E4C),
                       ),
-                      )
+                    ),
+                  )
                 ],
               )),
         ],
@@ -360,56 +362,112 @@ class LoginPage extends StatelessWidget {
   }
 }
 
-class ProductPage extends StatelessWidget {
-  const ProductPage({super.key});
+class Setting extends StatelessWidget {
+  const Setting({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        backgroundColor: const Color(0XFFFFFFFF),
-        title: const Text(
-          'GAMBAR',
-          style: TextStyle(
-            fontFamily: 'Lato',
-            fontSize: 35,
-            fontWeight: FontWeight.w900,
-            //tambahin 0XFF kalau mau ganti warna pake hex code
-            color: Color(0XFF6D6E4C),
+        backgroundColor: Colors.white,
+        title: Align(
+          alignment: Alignment.centerLeft,
+          child: Text(
+            'Account Settings',
+            style: TextStyle(
+              fontFamily: 'Oswald',
+              fontSize: 25,
+              fontWeight: FontWeight.w400,
+              color: Color(0xFF000000),
             ),
           ),
         ),
+      ),
+
       body: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          const SizedBox(height: 40),
-          const Padding(
-            padding: EdgeInsets.only(left: 18),
-            child: Text(
-              'LOG IN!',
-              style: TextStyle(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        const SizedBox(height: 30),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            return Container(
+              padding: EdgeInsets.only(left: 18),
+              width: constraints.maxWidth,
+              height: 90, // Menggunakan maxWidth dari constraints
+              color: Color(0XFFDDDDDD),
+              child: Text(
+                'My Account',
+                style: TextStyle(
                   fontFamily: 'Lato',
-                  fontSize: 30,
-                  fontWeight: FontWeight.w900,
-                  color: Color(0XFF6D6E4C)),
-            ),
-          ),
-         
-         const Padding(
-            padding: EdgeInsets.only(left: 18),
-            child: Text(
-              'Welcome Back',
-              style: TextStyle(
-                fontFamily: 'Raleway',
-                fontSize: 15,
-                fontWeight: FontWeight.w800,
-                color: Color(0XFF000000),
+                  fontSize: 16,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0XFF7B7B7B),
+                ),
               ),
-            ),
-          ),
-          ],
-     ),
-      );
+            );
+          },
+        ),
+
+        const SizedBox(height: 3),
+        LayoutBuilder(
+          builder: (context, constraints) {
+            return Container(
+              padding: EdgeInsets.only(left: 18),
+              width: constraints.maxWidth, // Menggunakan maxWidth dari constraints
+              decoration: BoxDecoration(
+                color: Color(0XFFFFFFFF),
+                border: Border.all(
+                color: Colors.black, // Warna tepi
+                width: 1, // Lebar tepi
+                ),
+              ),
+              child: Text(
+                'Privacy & Safety',
+                style: TextStyle(
+                  fontFamily: 'Oswald',
+                  fontSize: 24,
+                  fontWeight: FontWeight.w500,
+                  color: Color(0XFF000000),
+                ),
+              ),
+            );
+          },
+        ),
+      ],
+    )
+          
+
+
+
+
+          // const SizedBox(height: 30),
+          // const Padding(
+          //   padding: EdgeInsets.only(left: 18),
+          //   child: Text(
+          //     'My Account',
+          //     style: TextStyle(
+          //         fontFamily: 'Lato',
+          //         fontSize: 16,
+          //         fontWeight: FontWeight.w500,
+          //         color: Color(0XFF7B7B7B)),
+          //   ),
+          // ),
+          
+          // const SizedBox(height: 30),
+          // const Padding(
+          //   padding: EdgeInsets.only(left: 18),
+          //   child: Text(
+          //     'Privacy & Safety',
+          //     style: TextStyle(
+          //         fontFamily: 'oswald',
+          //         fontSize: 24,
+          //         fontWeight: FontWeight.w500,
+          //         color: Color(0XFF000000)),
+          //   ),
+          // ),
+        
+      
+    );
   }
 }
