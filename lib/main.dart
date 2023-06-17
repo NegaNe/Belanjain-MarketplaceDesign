@@ -436,37 +436,7 @@ class Setting extends StatelessWidget {
         ),
       ],
     )
-          
-
-
-
-
-          // const SizedBox(height: 30),
-          // const Padding(
-          //   padding: EdgeInsets.only(left: 18),
-          //   child: Text(
-          //     'My Account',
-          //     style: TextStyle(
-          //         fontFamily: 'Lato',
-          //         fontSize: 16,
-          //         fontWeight: FontWeight.w500,
-          //         color: Color(0XFF7B7B7B)),
-          //   ),
-          // ),
-          
-          // const SizedBox(height: 30),
-          // const Padding(
-          //   padding: EdgeInsets.only(left: 18),
-          //   child: Text(
-          //     'Privacy & Safety',
-          //     style: TextStyle(
-          //         fontFamily: 'oswald',
-          //         fontSize: 24,
-          //         fontWeight: FontWeight.w500,
-          //         color: Color(0XFF000000)),
-          //   ),
-          // ),
-        
+           
       
     );
   }
