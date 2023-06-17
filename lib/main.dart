@@ -767,8 +767,36 @@ class Setting extends StatelessWidget {
                 );
               },
             ),
-
+            
+            const SizedBox(
+            width: 100,
+            height: 60,
+          ),
+          Container(
+            alignment: Alignment.center,
+            child: ElevatedButton(
+              style: ElevatedButton.styleFrom(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(9.0)),
+                  backgroundColor: const Color(0XFF6D6E4C)),
+              onPressed: () {},
+              child: const Padding(
+                padding: EdgeInsets.fromLTRB(50, 5, 50, 5),
+                child: Text(
+                  "Logout",
+                  style: TextStyle(
+                    fontSize: 24,
+                    fontFamily: 'Lato',
+                    fontWeight: FontWeight.w700,
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
+              ),
+            ),
+          ),
           ],
-        ));
+          
+        ),
+        );
   }
 }
