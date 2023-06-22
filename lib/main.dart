@@ -1,6 +1,10 @@
 // 5
 
 import 'package:flutter/material.dart';
+import 'registerPage.dart';
+import 'loginPage.dart';
+import 'settingPage.dart';
+import 'user_profile.dart';
 
 void main() {
   runApp(const MyApp());
