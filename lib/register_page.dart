@@ -137,49 +137,53 @@ class _HomePageState extends State<HomePage> {
             width: 100,
             height: 25,
           ),
-          Container(
-            alignment: Alignment.center,
-            child: ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                  shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(9.0)),
-                  backgroundColor: const Color(0XFF6D6E4C)),
-              onPressed: () {},
-              child: const Padding(
-                padding: EdgeInsets.fromLTRB(128, 5, 128, 5),
-                child: Text(
-                  "SIGN UP",
-                  style: TextStyle(
-                    fontFamily: 'Lato',
-                    fontWeight: FontWeight.w900,
-                    color: Color(0xffFFFFFF),
-                  ),
-                ),
-              ),
+          // Center(
+          //     child: TextButton(
+          //   onPressed: () {
+          //     Navigator.pushNamed(context, '/setting');
+          //   },
+          //   child: const Text(
+          //     "Have an Account? Login Here",
+          //     style: TextStyle(
+          //         fontFamily: 'RalewayReg',
+          //         fontWeight: FontWeight.w600,
+          //         color: Color(0XFF6D6E4C)),
+          //   ),
+          // )),
+          Center(
+            child: Container(
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15), color: Colors.amber),
+              // color: Colors.amber,
+              height: 50,
+              width: 375,
+              margin: EdgeInsetsDirectional.all(15),
+              child: TextButton(
+                  style: TextButton.styleFrom(
+                      shape: const RoundedRectangleBorder(
+                          borderRadius: BorderRadius.all(Radius.circular(15)))),
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/setting');
+                  },
+                  child: Text(
+                    'Sign Up!',
+                  )),
             ),
           ),
-          TextButton(
-              onPressed: () {},
-              child: Column(
-                children: [
-                  const Align(
-                    alignment: Alignment.center,
-                  ),
-                  TextButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, '/setting');
-                    },
-                    child: const Text(
-                      "Already have an account? Login",
-                      style: TextStyle(
-                        fontFamily: 'RalewayReg',
-                        fontWeight: FontWeight.w600,
-                        color: Color(0XFF6D6E4C),
-                      ),
-                    ),
-                  )
-                ],
-              )),
+          SizedBox(height: 10),
+          Center(
+              child: TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/login');
+            },
+            child: const Text(
+              "Have an Account? Login Here",
+              style: TextStyle(
+                  fontFamily: 'RalewayReg',
+                  fontWeight: FontWeight.w600,
+                  color: Color(0XFF6D6E4C)),
+            ),
+          ))
         ],
       ),
     );

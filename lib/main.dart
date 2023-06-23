@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
         '/setting': (context) => const Setting(),
-        '/profile': (context) => const UserProfile(),
+        '/profile': (context) => const UserProfile()
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
