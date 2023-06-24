@@ -13,7 +13,7 @@ class BoxReuseable extends StatelessWidget {
       margin: EdgeInsets.all(2),
       padding: EdgeInsets.only(left: 10),
       child: container,
-
+    
       // backgroundColor: Colors.amber,
       // body: text,
     );

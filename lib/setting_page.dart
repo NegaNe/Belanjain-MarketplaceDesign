@@ -3,7 +3,6 @@ import 'package:marketplace/prefab/setting_page_prefab.dart';
 
 class Setting extends StatelessWidget {
   const Setting({super.key});
-  final String _contents = 'MyInsides';
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +34,6 @@ class Setting extends StatelessWidget {
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(
                     child: Text('My Address'),
                   ),
@@ -43,7 +41,6 @@ class Setting extends StatelessWidget {
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Credentials')),
                 ),
               ),
@@ -54,25 +51,21 @@ class Setting extends StatelessWidget {
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Chat Settings')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Notification Settings')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Privacy Settings')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Language')),
                 ),
               ),
@@ -83,25 +76,21 @@ class Setting extends StatelessWidget {
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Help')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Rules')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('FAQ')),
                 ),
               ),
               Expanded(
                 child: BoxReuseable(
-                  text: Text('$_contents'),
                   container: Container(child: Text('Terms and Condition')),
                 ),
               ),
@@ -110,12 +99,23 @@ class Setting extends StatelessWidget {
               ),
               SizedBox(
                 child: Container(
-                  decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
-                  child: TextButton(onPressed: () {}, child: Text("Logout")),
+                  decoration: BoxDecoration(
+                    color: Color(0XFF6D6E4C),
+                    borderRadius: BorderRadius.circular(5),
+                  ),
+                  child: TextButton(
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/');
+                    },
+                    child: Text(
+                      'Logout',
+                      style: TextStyle(color: Colors.white),
+                    ),
+                  ),
                   width: 150,
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 25,
               )
             ],
