@@ -172,18 +172,40 @@ class _HomePageState extends State<HomePage> {
           ),
           SizedBox(height: 10),
           Center(
-              child: TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/login');
-            },
-            child: const Text(
-              "Have an Account? Login Here",
-              style: TextStyle(
-                  fontFamily: 'RalewayReg',
-                  fontWeight: FontWeight.w600,
-                  color: Color(0XFF6D6E4C)),
+            child: TextButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/login');
+              },
+              child: const Text(
+                "Have an Account? Login Here",
+                style: TextStyle(
+                    fontFamily: 'RalewayReg',
+                    fontWeight: FontWeight.w600,
+                    color: Color(0XFF6D6E4C)),
+              ),
             ),
-          ))
+          ),
+
+          Column(
+            children: [
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/catalog');
+                  },
+                  child: const Text("Go To Catalog")),
+              TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/setting');
+                  },
+                  child: const Text('Go To Settings')),
+              TextButton(
+                  //copy dari sini
+                  onPressed: () {},
+                  child: const Text(
+                      'EMPTY DO NOT CLICK ADD IN REGISTER_PAGE FOR DEBUG!!! ~HS')), //sampai disini
+              //trus paste disini. BUAT TOMBOL DEBUG
+            ],
+          )
         ],
       ),
     );

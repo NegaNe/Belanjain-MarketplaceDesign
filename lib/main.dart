@@ -5,6 +5,7 @@ import 'register_page.dart';
 import 'login_page.dart';
 import 'setting_page.dart';
 import 'user_profile.dart';
+import 'catalog_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,8 @@ class MyApp extends StatelessWidget {
         '/': (context) => const HomePage(),
         '/login': (context) => const LoginPage(),
         '/setting': (context) => const Setting(),
-        '/profile': (context) => const UserProfile()
+        '/profile': (context) => const UserProfile(),
+        '/catalog': (context) => const Catalog(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
