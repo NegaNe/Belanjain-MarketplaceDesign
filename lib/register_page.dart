@@ -198,8 +198,7 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, '/setting');
                   },
                   child: const Text('Go To Settings')),
-              TextButton(
-                  //copy dari sini
+              TextButton( //copy dari sini
                   onPressed: () {},
                   child: const Text(
                       'EMPTY DO NOT CLICK ADD IN REGISTER_PAGE FOR DEBUG!!! ~HS')), //sampai disini
