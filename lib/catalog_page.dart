@@ -15,7 +15,7 @@ class Catalog extends StatelessWidget {
         children: [
           Container(
             color: Colors.amber,
-            child: Row(
+            child: const Row(
               children: [
                 Row(
                   children: [
