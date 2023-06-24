@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 class Payment extends StatelessWidget {
   const Payment({super.key});
-  final String _contents = 'MyInsides';
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +27,7 @@ class Payment extends StatelessWidget {
         ),
       ),
 
-      
+
 /* masih gatau diapain
 body: Container(
         color: Color.fromARGB(255, 117, 118, 111),
