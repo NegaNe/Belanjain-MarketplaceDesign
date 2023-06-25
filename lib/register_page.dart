@@ -163,7 +163,7 @@ class _HomePageState extends State<HomePage> {
                       shape: const RoundedRectangleBorder(
                           borderRadius: BorderRadius.all(Radius.circular(15)))),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/setting');
+                    Navigator.pushNamed(context, '/profile');
                   },
                   child: Text(
                     'Sign Up!',
