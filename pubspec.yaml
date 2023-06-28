@@ -85,6 +85,9 @@ flutter:
     - family: RalewayReg
       fonts:
         - asset: assets/fonts/Raleway-Regular.ttf
+    - family: OswaldReg
+      fonts:
+        - asset: assets/fonts/Oswald-Regular.ttf
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf

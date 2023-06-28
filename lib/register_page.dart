@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage> {
               )),
           const SizedBox(
             width: 100,
-            height: 25,
+            height: 17,
           ),
           // Center(
           //     child: TextButton(
@@ -153,24 +153,28 @@ class _HomePageState extends State<HomePage> {
           Center(
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(15), color: Colors.amber),
-              // color: Colors.amber,
-              height: 50,
+                  borderRadius: BorderRadius.circular(9.0), color: Color(0XFF6D6E4C)),
+              height: 40,
               width: 375,
               margin: EdgeInsetsDirectional.all(15),
               child: TextButton(
                   style: TextButton.styleFrom(
                       shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(15)))),
+                          borderRadius: BorderRadius.all(Radius.circular(9.0)))),
                   onPressed: () {
                     Navigator.pushNamed(context, '/profile');
                   },
                   child: Text(
-                    'Sign Up!',
+                    'SIGN UP',
+                    style: TextStyle(
+                      fontFamily: 'Lato',
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xffFFFFFF),
+                    ),
                   )),
             ),
           ),
-          SizedBox(height: 10),
+          SizedBox(height:1),
           Center(
             child: TextButton(
               onPressed: () {
