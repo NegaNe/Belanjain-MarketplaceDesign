@@ -5,89 +5,104 @@ import 'package:marketplace/prefab/setting_page_prefab.dart';
 class UserProfile extends StatelessWidget {
   const UserProfile({super.key});
 
+  final String URL =
+      'https://static.vecteezy.com/system/resources/previews/017/221/783/original/google-pay-logo-transparent-free-png.png';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Petter Official Store'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.chat),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a cart list')));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.shopping_cart),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a cart list')));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.settings),
+            tooltip: 'Setting',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a setting')));
+            },
+          ),
+        ],
+        backgroundColor: Colors.amber,
       ),
       body: Column(
         children: [
+          Container(
+            color: Colors.amber,
+            height: 150,
+          ),
+          const SizedBox(
+            height: 55,
+          ),
           Expanded(
-              child: Column(
-            children: [
-              SizedBox(
-                height: 45,
-              ),
-              Container(
-                alignment: Alignment.centerLeft,
-                padding: EdgeInsets.only(left: 10),
-                child: Text(
-                  'My Purchase',
-                  style: TextStyle(
-                    fontSize: 25,
-                    fontFamily: 'Oswald',
-                    fontWeight: FontWeight.w700,
-                    // color: Color(0XFFFFFFF),
-                  )
-                ), 
-              ),
-              Expanded(
-                child: BoxReuseable(
-                  container: Container(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Text(
-                      'To Pay'
-                    ),
-                  )
-                )
-              ),
-              Expanded(
-                child: BoxReuseable(
-                  container: Container(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Text(
-                      'To Ship'
-                    ),
-                  )
-                )
-              ),
-              Expanded(
-                child: BoxReuseable(
-                  container: Container(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Text(
-                      'To Receive'
-                    ),
-                  )
-                )
-              ),
-              Expanded(
-                child: BoxReuseable(
-                  container: Container(
-                    padding: EdgeInsets.only(left: 40),
-                    child: Text(
-                      'To Rate'
-                    ),
-                  )
-                )
-              ),
-              SizedBox(
-                height: 25,
-              ),
-              SizedBox(
-                child: Container(
-                  decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
-                  child: TextButton(onPressed: () {}, child: Text("Logout")),
-                  width: 150,
+            child: RowReuseable(
+              row: Row(children: [
+                Image(
+                  image: NetworkImage(URL),
+                  width: 50,
+                  height: 50,
                 ),
-              ),
-              SizedBox(
-                height: 25,
-              )
-            ],
-          ))
+                Text(
+                  'To Pay',
+                ),
+              ]),
+            ),
+          ),
+          Expanded(
+            child: RowReuseable(
+              row: Row(children: [
+                Image(
+                  image: NetworkImage(URL),
+                  width: 50,
+                  height: 50,
+                ),
+                Text('To Ship'),
+              ]),
+            ),
+          ),
+          Expanded(
+            child: RowReuseable(
+              row: Row(children: [
+                Image(
+                  image: NetworkImage(URL),
+                  width: 50,
+                  height: 50,
+                ),
+                Text('To Receive'),
+              ]),
+            ),
+          ),
+          Expanded(
+            child: RowReuseable(
+              row: Row(children: [
+                Image(
+                  image: NetworkImage(URL),
+                  width: 50,
+                  height: 50,
+                ),
+                Text('To Rate'),
+              ]),
+            ),
+          ),
+          SizedBox(
+            height: 300,
+          )
         ],
       ),
     );
