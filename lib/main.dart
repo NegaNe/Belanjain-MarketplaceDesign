@@ -1,6 +1,7 @@
 // 5
 
 import 'package:flutter/material.dart';
+import 'package:marketplace/payment.dart';
 import 'register_page.dart';
 import 'login_page.dart';
 import 'setting_page.dart';
@@ -26,6 +27,7 @@ class MyApp extends StatelessWidget {
         '/setting': (context) => const Setting(),
         '/profile': (context) => const UserProfile(),
         '/catalog': (context) => const Catalog(),
+        '/payment': (context) => const Payment(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),

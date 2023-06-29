@@ -203,8 +203,13 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/profile');
                   },
-                  child: const Text('Go To Profile')), //sampai disini
-              //trus paste disini. BUAT TOMBOL DEBUG
+                  child: const Text('Go To Profile')),
+              TextButton(
+                  //copy dari sini
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/payment');
+                  },
+                  child: const Text('Go To Payment')),
             ],
           )
         ],
