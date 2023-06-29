@@ -25,18 +25,20 @@ class BoxReuseable extends StatelessWidget {
 
 class RowReuseable extends StatelessWidget {
   // const RowReuseable({super.key});
-  RowReuseable({required this.row});
-  final Row row;
+  const RowReuseable({super.key, this.row});
+  final Row? row;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(color: Colors.amber),
-      // margin: EdgeInsets.all(25),
-      padding: EdgeInsets.only(left: 10),
-      child: Container(
-        child: row
-      ),
+      alignment: Alignment.centerLeft,
+      decoration: const BoxDecoration(color: Colors.amber),
+      // margin: EdgeInsets.all(2),
+      padding: EdgeInsets.only(left: 30),
+      child: row,
+
+      // backgroundColor: Colors.amber,
+      // body: text,
     );
   }
 }
