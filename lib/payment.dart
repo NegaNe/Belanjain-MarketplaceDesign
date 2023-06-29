@@ -134,17 +134,21 @@ class Payment extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(width: 1),
             ),
-            child: const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 30),
-                ),
-                Text(
-                  "Use Voucher",
-                  style: TextStyle(fontSize: 24),
-                )
-              ],
-            ),
+            child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Use Voucher",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                    Container(
+                      child: Text('Enter Voucher >'),
+                      alignment: Alignment.centerRight,
+                    )
+                  ],
+                )),
           ),
           SizedBox(
             height: 75,
@@ -153,17 +157,21 @@ class Payment extends StatelessWidget {
             decoration: BoxDecoration(
               border: Border.all(width: 1),
             ),
-            child: const Row(
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(left: 30),
-                ),
-                Text(
-                  "Payment Options",
-                  style: TextStyle(fontSize: 24),
-                )
-              ],
-            ),
+            child: Container(
+                margin: EdgeInsets.symmetric(horizontal: 15),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      "Payment Options",
+                      style: TextStyle(fontSize: 24),
+                    ),
+                    Container(
+                      child: Text('COD >'),
+                      alignment: Alignment.centerRight,
+                    )
+                  ],
+                )),
           ),
           SizedBox(
             height: 25,
