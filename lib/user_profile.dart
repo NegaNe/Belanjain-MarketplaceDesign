@@ -19,7 +19,7 @@ class UserProfile extends StatelessWidget {
             tooltip: 'Chat',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a cart list')));
+                  const SnackBar(content: Text('This is a chat')));
             },
           ),
           IconButton(
