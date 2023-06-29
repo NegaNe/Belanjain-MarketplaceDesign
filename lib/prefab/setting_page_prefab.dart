@@ -1,7 +1,10 @@
+import 'dart:ffi';
+
 import 'package:flutter/material.dart';
 
 class BoxReuseable extends StatelessWidget {
   BoxReuseable({this.text, required this.container});
+
   final Container container;
   final Text? text;
 
@@ -13,9 +16,27 @@ class BoxReuseable extends StatelessWidget {
       margin: EdgeInsets.all(2),
       padding: EdgeInsets.only(left: 10),
       child: container,
-    
+
       // backgroundColor: Colors.amber,
       // body: text,
+    );
+  }
+}
+
+class RowReuseable extends StatelessWidget {
+  // const RowReuseable({super.key});
+  RowReuseable({required this.row});
+  final Row row;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(color: Colors.amber),
+      // margin: EdgeInsets.all(25),
+      padding: EdgeInsets.only(left: 10),
+      child: Container(
+        child: row
+      ),
     );
   }
 }
