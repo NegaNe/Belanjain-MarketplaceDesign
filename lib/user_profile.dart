@@ -9,6 +9,33 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        title: const Text('Petter Official Store'),
+        actions: <Widget>[
+          IconButton(
+            icon: const Icon(Icons.chat),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a cart list')));
+            },
+          ),
+          IconButton(
+            icon: const Icon(Icons.shopping_cart),
+            tooltip: 'Show Snackbar',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a cart list')));
+            },
+          ),
+            IconButton(
+            icon: const Icon(Icons.settings),
+            tooltip: 'Setting',
+            onPressed: () {
+              ScaffoldMessenger.of(context).showSnackBar(
+                  const SnackBar(content: Text('This is a setting')));
+            },
+          ),
+        ],
         backgroundColor: Colors.amber,
       ),
       body: Column(
