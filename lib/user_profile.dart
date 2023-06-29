@@ -16,7 +16,7 @@ class UserProfile extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.chat),
-            tooltip: 'Show Snackbar',
+            tooltip: 'Chat',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('This is a cart list')));
@@ -24,7 +24,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart),
-            tooltip: 'Show Snackbar',
+            tooltip: 'Cart',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('This is a cart list')));
