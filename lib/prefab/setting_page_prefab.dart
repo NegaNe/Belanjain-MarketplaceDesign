@@ -32,7 +32,7 @@ class RowReuseable extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       alignment: Alignment.centerLeft,
-      decoration: const BoxDecoration(color: Colors.amber),
+      decoration: const BoxDecoration(color: Color(0XFF6D6E4C)),
       // margin: EdgeInsets.all(2),
       padding: EdgeInsets.only(left: 30),
       child: row,

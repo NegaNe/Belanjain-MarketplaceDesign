@@ -45,7 +45,8 @@ class UserProfile extends StatelessWidget {
       ),
       body: Column(
         children: [
-          Row(
+          Container(
+            child: Row(
             children: [
               Image(
                 image: NetworkImage(URL),
@@ -58,6 +59,7 @@ class UserProfile extends StatelessWidget {
                     'Petter Official Store',
                     style: TextStyle(
                       fontSize: 20,
+                      color: Color(0xffFFFFFF),
                       fontWeight: FontWeight.w800,
                     ),
                   ),
@@ -67,18 +69,21 @@ class UserProfile extends StatelessWidget {
                         'Followers: 11k',
                         style: TextStyle(
                           fontSize: 10,
+                          color: Color(0xffFFFFFF),
                         ),
                       ),
                       Text(
                         '\t\t|\t\t',
                         style: TextStyle(
                           fontSize: 10,
+                          color: Color(0xffFFFFFF),
                         ),
                       ),
                       Text(
                         'Following: 30k',
                         style: TextStyle(
                           fontSize: 10,
+                          color: Color(0xffFFFFFF),
                         ),
                       ),
                     ],
@@ -86,6 +91,8 @@ class UserProfile extends StatelessWidget {
                 ],
               ),
             ],
+            ),
+            color: Color(0xff6D6E4C),
           ),
           const SizedBox(
             height: 55,
@@ -101,6 +108,7 @@ class UserProfile extends StatelessWidget {
                           'My Purchases',
                           style: TextStyle(
                             fontSize: 20,
+                            color: Color(0xffFFFFFF),
                           ),
                         ),
                         Image(
@@ -136,6 +144,9 @@ class UserProfile extends StatelessWidget {
                 ),
                 Text(
                   'To Pay',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
                 ),
               ]),
             ),
@@ -148,7 +159,12 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Ship'),
+                Text(
+                  'To Ship',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
               ]),
             ),
           ),
@@ -160,7 +176,12 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Receive'),
+                Text(
+                  'To Receive',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                  ),
               ]),
             ),
           ),
@@ -172,12 +193,27 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Rate'),
+                Text(
+                  'To Rate',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
               ]),
             ),
           ),
           SizedBox(
-            height: 300,
+            height: 200,
+          ),
+          SizedBox(
+            child: Container(
+              decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
+              child: TextButton(onPressed: () {}, child: Text("Logout", style: TextStyle(color: Color(0xffFFFFFF)),)),
+              width: 150,
+            ),
+          ),
+          SizedBox(
+            height: 25,
           )
         ],
       ),
