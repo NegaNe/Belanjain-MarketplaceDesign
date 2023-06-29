@@ -45,14 +45,15 @@ class UserProfile extends StatelessWidget {
       ),
       body: Column(
         children: [
-            Column(children: [
-              Row(
+          Row(
+            children: [
+              Image(
+                image: NetworkImage(URL),
+                width: 100,
+                height: 100,
+              ),
+              const Column(
                 children: [
-                  Image(
-                    image: NetworkImage(URL),
-                    width: 100,
-                    height: 100,
-                  ),
                   Text(
                     'Petter Official Store',
                     style: TextStyle(
@@ -60,43 +61,42 @@ class UserProfile extends StatelessWidget {
                       fontWeight: FontWeight.w800,
                     ),
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  Text(
-                    'Followers: 11k',
-                    style: TextStyle(
-                      fontSize: 10,
-                    ),
-                  ),
-                  Text(
-                    '\t\t|\t\t',
-                    style: TextStyle(
-                      fontSize: 10,
-                    ),
-                  ),
-                  Text(
-                    'Following: 30k',
-                    style: TextStyle(
-                      fontSize: 10,
-                    ),
-                  ),
+                  Row(
+                    children: [
+                      Text(
+                        'Followers: 11k',
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                      Text(
+                        '\t\t|\t\t',
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                      Text(
+                        'Following: 30k',
+                        style: TextStyle(
+                          fontSize: 10,
+                        ),
+                      ),
+                    ],
+                  )
                 ],
               ),
             ],
-            
-            ),
+          ),
           const SizedBox(
             height: 55,
           ),
           Expanded(
             child: RowReuseable(
               row: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  Row(
-                    children: [
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
                         Text(
                           'My Purchases',
                           style: TextStyle(
@@ -108,23 +108,22 @@ class UserProfile extends StatelessWidget {
                           width: 50,
                           height: 50,
                         ),
-                    ], 
-                  ),
-                  Row(
-                    children: [
-                      Container(
-                        child:
-                          Text(
-                          'Lihat Riwayat Pesanan',
-                          style: TextStyle(
-                            fontSize: 10,
-                            color: Color(0xffB5B4B4),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            'Lihat Riwayat Pesanan',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color(0xffB5B4B4),
+                            ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-              ]),
+                      ],
+                    ),
+                  ]),
             ),
           ),
           Expanded(
