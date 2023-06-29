@@ -12,19 +12,20 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Petter Official Store'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.chat),
-            tooltip: 'Show Snackbar',
+            color: Color(0xffFFFFFF),
+            tooltip: 'Chat',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a cart list')));
+                  const SnackBar(content: Text('This is a chat')));
             },
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart),
-            tooltip: 'Show Snackbar',
+            color: Color(0xffFFFFFF),
+            tooltip: 'Cart',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text('This is a cart list')));
@@ -32,6 +33,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.settings),
+            color: Color(0xffFFFFFF),
             tooltip: 'Setting',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -39,16 +41,91 @@ class UserProfile extends StatelessWidget {
             },
           ),
         ],
-        backgroundColor: Colors.amber,
+        backgroundColor: Color(0xff6D6E4C),
       ),
       body: Column(
         children: [
-          Container(
-            color: Colors.amber,
-            height: 150,
-          ),
+            Column(children: [
+              Row(
+                children: [
+                  Image(
+                    image: NetworkImage(URL),
+                    width: 100,
+                    height: 100,
+                  ),
+                  Text(
+                    'Petter Official Store',
+                    style: TextStyle(
+                      fontSize: 20,
+                      fontWeight: FontWeight.w800,
+                    ),
+                  ),
+                ],
+              ),
+              Row(
+                children: [
+                  Text(
+                    'Followers: 11k',
+                    style: TextStyle(
+                      fontSize: 10,
+                    ),
+                  ),
+                  Text(
+                    '\t\t|\t\t',
+                    style: TextStyle(
+                      fontSize: 10,
+                    ),
+                  ),
+                  Text(
+                    'Following: 30k',
+                    style: TextStyle(
+                      fontSize: 10,
+                    ),
+                  ),
+                ],
+              ),
+            ],
+            
+            ),
           const SizedBox(
             height: 55,
+          ),
+          Expanded(
+            child: RowReuseable(
+              row: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                        Text(
+                          'My Purchases',
+                          style: TextStyle(
+                            fontSize: 20,
+                          ),
+                        ),
+                        Image(
+                          image: NetworkImage(URL),
+                          width: 50,
+                          height: 50,
+                        ),
+                    ], 
+                  ),
+                  Row(
+                    children: [
+                      Container(
+                        child:
+                          Text(
+                          'Lihat Riwayat Pesanan',
+                          style: TextStyle(
+                            fontSize: 10,
+                            color: Color(0xffB5B4B4),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+              ]),
+            ),
           ),
           Expanded(
             child: RowReuseable(
