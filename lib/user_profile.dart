@@ -208,7 +208,7 @@ class UserProfile extends StatelessWidget {
           SizedBox(
             child: Container(
               decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
-              child: TextButton(onPressed: () {}, child: Text("Logout", style: TextStyle(color: Color(0xffFFFFFF)),)),
+              child: TextButton(onPressed: () {Navigator.pushNamed(context, '/login');}, child: Text("Logout", style: TextStyle(color: Color(0xffFFFFFF)),)),
               width: 150,
             ),
           ),
