@@ -144,7 +144,10 @@ class Payment extends StatelessWidget {
           ),
           DecoratedBox(
             decoration: BoxDecoration(
-              border: Border.all(width: 1),
+                border: Border(
+                    top: BorderSide(color: Color(0xff9B9B9B)),
+                    bottom: BorderSide(color: Color(0xff9B9B9B)),
+                  ),
             ),
             child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 15),
@@ -156,7 +159,11 @@ class Payment extends StatelessWidget {
                       style: TextStyle(fontSize: 24),
                     ),
                     Container(
-                      child: Text('Enter Voucher >'),
+                      child: Text('Enter Voucher >',
+                      style: TextStyle(
+                        color: Color(0xff9B9B9B),
+                      )
+                      ),
                       alignment: Alignment.centerRight,
                     )
                   ],
@@ -167,8 +174,11 @@ class Payment extends StatelessWidget {
           ),
           DecoratedBox(
             decoration: BoxDecoration(
-              border: Border.all(width: 1),
-            ),
+                border: Border(
+                    top: BorderSide(color: Color(0xff9B9B9B)),
+                    bottom: BorderSide(color: Color(0xff9B9B9B)),
+                  ),
+                  ),
             child: Container(
                 margin: EdgeInsets.symmetric(horizontal: 15),
                 child: Row(
@@ -179,7 +189,11 @@ class Payment extends StatelessWidget {
                       style: TextStyle(fontSize: 24),
                     ),
                     Container(
-                      child: Text('COD >'),
+                      child: Text('COD >',
+                      style: TextStyle(
+                        color: Color(0xff9B9B9B),
+                      ),
+                      ),
                       alignment: Alignment.centerRight,
                     )
                   ],
