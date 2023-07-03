@@ -9,18 +9,18 @@ class Payment extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: const Color(0XFFFFFFFF),
-        toolbarHeight: 110,
+        toolbarHeight: 100,
         //elevation: 0,
         title: const Padding(
           padding: EdgeInsets.only(
-            left: 25,
+            left: 5,
           ),
           child: Text(
             'Payment',
             style: TextStyle(
-              fontFamily: 'Oswald',
+              fontFamily: 'OswaldReg',
               fontSize: 30,
-              fontWeight: FontWeight.w700,
+              fontWeight: FontWeight.w500,
               color: Color(0XFF000000),
             ),
           ),
@@ -93,22 +93,34 @@ class Payment extends StatelessWidget {
           ),
           DecoratedBox(
               decoration: BoxDecoration(
-                  color: const Color.fromRGBO(186, 219, 82, 82),
-                  border: Border.all(width: 1)),
+                color: Color(0xffF1FFC4),
+                  // color: const Color.fromRGBO(186, 219, 82, 82),
+                  border: Border(
+                    top: BorderSide(color: Color(0xffBADB52)),
+                    bottom: BorderSide(color: Color(0xffBADB52)),
+                  )
+                  ),
               child: Column(
                 children: [
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: EdgeInsets.fromLTRB(22, 10, 0, 10),
                     child: const Column(
                       children: [
                         Row(children: [
-                          Text("Shipping Option"),
+                          Text("Shipping Option",
+                          style: TextStyle(
+                            fontFamily: 'OswaldReg'
+                          ),
+                          ),
                         ]),
                         Row(
                           children: [
                             Text(
                               "SiCepat",
-                              style: TextStyle(fontSize: 28),
+                              style: TextStyle(
+                                fontSize: 28,
+                                fontFamily: 'OswaldReg',
+                              ),
                             )
                           ],
                         ),
@@ -118,7 +130,7 @@ class Payment extends StatelessWidget {
                               "Arrive by 5-7 March",
                               style: TextStyle(
                                   color: Color.fromRGBO(0, 0, 0, 0.445),
-                                  fontFamily: ''),
+                                  fontFamily: 'OswaldReg'),
                             ),
                           ],
                         ),
