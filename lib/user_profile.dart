@@ -48,22 +48,42 @@ class UserProfile extends StatelessWidget {
         children: [
           Container(
             color: Color(0xff6D6E4C),
+            height: 140,
             child: Row(
               children: [
-                Image(
-                  image: NetworkImage(URL),
-                  width: 100,
-                  height: 100,
-                ),
+                Container(
+                  margin: EdgeInsets.fromLTRB(40,3, 0, 0),
+                  height: 80.0,
+                  width: 80.0,
+                  decoration: BoxDecoration(
+                    border: Border(
+                      bottom: BorderSide(color: Colors.white),
+                      right: BorderSide(color: Colors.white),
+                      ),
+                    borderRadius: BorderRadius.circular(50), 
+                    image: DecorationImage(
+                      image: NetworkImage('https://picsum.photos/seed/picsum/200/200'),
+                      fit: BoxFit.cover,
+                    ),
+                  ),
+              ),
                 const Row(
                   children: [
+                    Padding(padding: EdgeInsets.fromLTRB(25, 0, 0, 0),),
                     Text.rich(TextSpan(children: [
                       TextSpan(
                           text: 'Petter Official Store\n',
-                          style: TextStyle(fontSize: 20, color: Colors.white)),
+                          style: TextStyle(
+                            fontFamily:'OswaldReg',
+                            fontSize: 20, color: Colors.white,
+                            ),
+                            ),
                       TextSpan(
                           text: 'Followers: 11k | Following: 10k',
-                          style: TextStyle(fontSize: 10, color: Colors.white))
+                          style: TextStyle(
+                            fontFamily: 'OswaldReg',
+                            fontSize: 10, color: Colors.white,
+                          ),),
                     ]))
                   ],
                 )
@@ -71,7 +91,7 @@ class UserProfile extends StatelessWidget {
             ),
           ),
           const SizedBox(
-            height: 55,
+            height: 45,
           ),
           Expanded(
             child: RowReuseable(
@@ -81,25 +101,29 @@ class UserProfile extends StatelessWidget {
                     Row(
                       children: [
                         Text(
-                          'My Purchases',
+                          'MY PURCHASES',
                           style: TextStyle(
+                            fontFamily: 'OswaldReg',
                             fontSize: 20,
                             color: Color(0xffFFFFFF),
                           ),
                         ),
-                        Image(
-                          image: NetworkImage(URL),
-                          width: 50,
-                          height: 50,
+                        Padding(padding: EdgeInsets.fromLTRB(10,0, 0, 0),
                         ),
+                          Icon(Icons.shopping_cart,
+                            size: 25,
+                            color: Color(0xffFFFFFF),
+                          ),
                       ],
                     ),
                     Row(
                       children: [
                         Container(
+                          margin: EdgeInsets.fromLTRB(0, 0, 10, 0),
                           child: Text(
                             'Lihat Riwayat Pesanan',
                             style: TextStyle(
+                              fontFamily: 'OswaldReg',
                               fontSize: 10,
                               color: Color(0xffB5B4B4),
                             ),
@@ -113,14 +137,17 @@ class UserProfile extends StatelessWidget {
           Expanded(
             child: RowReuseable(
               row: Row(children: [
-                Image(
-                  image: NetworkImage(URL),
-                  width: 50,
-                  height: 50,
+                Icon(Icons.wallet_sharp,
+                  size: 25,
+                  color: Color(0xffFFFFFF),
                 ),
+                Padding(
+                  padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
+                  ),
                 Text(
                   'To Pay',
                   style: TextStyle(
+                    fontFamily: 'OswaldReg',
                     color: Color(0xffFFFFFF),
                   ),
                 ),
@@ -130,14 +157,16 @@ class UserProfile extends StatelessWidget {
           Expanded(
             child: RowReuseable(
               row: Row(children: [
-                Image(
-                  image: NetworkImage(URL),
-                  width: 50,
-                  height: 50,
+                Icon(Icons.local_shipping,
+                  size: 25,
+                  color: Color(0XFFFFFFFF),
+                ),
+                Padding(padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                 ),
                 Text(
                   'To Ship',
                   style: TextStyle(
+                    fontFamily: 'OswaldReg',
                     color: Color(0xffFFFFFF),
                   ),
                 ),
@@ -147,14 +176,16 @@ class UserProfile extends StatelessWidget {
           Expanded(
             child: RowReuseable(
               row: Row(children: [
-                Image(
-                  image: NetworkImage(URL),
-                  width: 50,
-                  height: 50,
+                Icon(Icons.archive_outlined,
+                  size: 25,
+                  color: Color(0xffFFFFFF),
+                ),
+                Padding(padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                 ),
                 Text(
                   'To Receive',
                   style: TextStyle(
+                    fontFamily: 'OswaldReg',
                     color: Color(0xffFFFFFF),
                   ),
                 ),
@@ -164,14 +195,16 @@ class UserProfile extends StatelessWidget {
           Expanded(
             child: RowReuseable(
               row: Row(children: [
-                Image(
-                  image: NetworkImage(URL),
-                  width: 50,
-                  height: 50,
+                Icon(Icons.star_rounded,
+                  size: 30,
+                  color: Color(0xffFFFFFF),
+                ),
+                Padding(padding: EdgeInsets.fromLTRB(16, 0, 0, 0),
                 ),
                 Text(
                   'To Rate',
                   style: TextStyle(
+                    fontFamily: 'OswaldReg',
                     color: Color(0xffFFFFFF),
                   ),
                 ),
@@ -179,24 +212,32 @@ class UserProfile extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 200,
+            height: 100,
           ),
           SizedBox(
             child: Container(
-              decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
+              decoration: BoxDecoration(
+                color: Color(0XFF6D6E4C),
+                borderRadius: BorderRadius.circular(9),
+                ),
               child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/login');
                   },
                   child: Text(
                     "Logout",
-                    style: TextStyle(color: Color(0xffFFFFFF)),
+                    style: TextStyle(
+                      fontFamily: 'OswaldReg',
+                      fontSize:20,
+                      color: Color(0xffFFFFFF),
+                      ),
                   )),
               width: 150,
+              height: 45,
             ),
           ),
           SizedBox(
-            height: 25,
+            height: 50,
           )
         ],
       ),
