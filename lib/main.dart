@@ -1,6 +1,7 @@
 // 5
 
 import 'package:flutter/material.dart';
+import 'package:marketplace/chat_page.dart';
 import 'package:marketplace/payment.dart';
 import 'register_page.dart';
 import 'login_page.dart';
@@ -28,6 +29,7 @@ class MyApp extends StatelessWidget {
         '/profile': (context) => const UserProfile(),
         '/catalog': (context) => const Catalog(),
         '/payment': (context) => const Payment(),
+        '/chat': (context) => const chatPage(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),

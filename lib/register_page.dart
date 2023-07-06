@@ -153,14 +153,16 @@ class _HomePageState extends State<HomePage> {
           Center(
             child: Container(
               decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(9.0), color: Color(0XFF6D6E4C)),
+                  borderRadius: BorderRadius.circular(9.0),
+                  color: Color(0XFF6D6E4C)),
               height: 40,
               width: 375,
               margin: EdgeInsetsDirectional.all(15),
               child: TextButton(
                   style: TextButton.styleFrom(
                       shape: const RoundedRectangleBorder(
-                          borderRadius: BorderRadius.all(Radius.circular(9.0)))),
+                          borderRadius:
+                              BorderRadius.all(Radius.circular(9.0)))),
                   onPressed: () {
                     Navigator.pushNamed(context, '/profile');
                   },
@@ -174,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                   )),
             ),
           ),
-          SizedBox(height:1),
+          SizedBox(height: 1),
           Center(
             child: TextButton(
               onPressed: () {
@@ -214,6 +216,12 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, '/payment');
                   },
                   child: const Text('Go To Payment')),
+              TextButton(
+                  //copy dari sini
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/chat');
+                  },
+                  child: const Text('Go To Chat')),
             ],
           )
         ],
