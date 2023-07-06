@@ -1,7 +1,6 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
-import 'package:marketplace/prefab/setting_page_prefab.dart';
 
 class Catalog extends StatelessWidget {
   const Catalog({super.key});
