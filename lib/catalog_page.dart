@@ -54,7 +54,7 @@ class Catalog extends StatelessWidget {
                   color: Colors.grey,
                   child: Row(
                     children: [
-                      Image(
+                      const Image(
                         image: NetworkImage(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
                         height: 50,
