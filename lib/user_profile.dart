@@ -52,9 +52,9 @@ class UserProfile extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  margin: EdgeInsets.fromLTRB(40, 3, 0, 0),
-                  height: 80.0,
-                  width: 80.0,
+                  margin: EdgeInsets.fromLTRB(30, 3, 0, 0),
+                  height: 90.0,
+                  width: 90.0,
                   decoration: BoxDecoration(
                     border: Border.all(width: 1.5, color: Colors.white),
                     borderRadius: BorderRadius.circular(50),
@@ -68,7 +68,7 @@ class UserProfile extends StatelessWidget {
                 const Row(
                   children: [
                     Padding(
-                      padding: EdgeInsets.fromLTRB(25, 0, 0, 0),
+                      padding: EdgeInsets.fromLTRB(20, 0, 0, 0),
                     ),
                     Text.rich(TextSpan(children: [
                       TextSpan(
