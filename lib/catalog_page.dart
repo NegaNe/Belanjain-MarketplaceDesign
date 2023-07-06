@@ -1,62 +1,84 @@
 // import 'dart:html';
 
 import 'package:flutter/material.dart';
+import 'package:marketplace/prefab/setting_page_prefab.dart';
 
 class Catalog extends StatelessWidget {
   const Catalog({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final List<String> store = <String>[
+      'Sony',
+      'Apple',
+      'Cherry MX',
+      'Smasnug'
+    ];
+    final List<String> product = <String>[
+      'Sony PlayStation 4',
+      'MacBook Air M2',
+      'Cherry ',
+      'Smasnug A54 8/256GB'
+    ];
+    final List<String> price = <String>[
+      '8.999.999',
+      '4.999.999',
+      '1.999.999',
+      '4.999.999'
+    ];
+    final List<String> imageList = <String>[''];
+
     return Scaffold(
       appBar: AppBar(
-        title: Text('Catalog'),
+        title: const Text('Catalog'),
       ),
-      body: Column(
-        children: [
-          Container(
-            color: Colors.amber,
-            child: const Row(
+      body: ListView.separated(
+        padding: const EdgeInsets.all(8),
+        itemCount: store.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            color: Colors.cyan,
+            child: Column(
               children: [
                 Row(
                   children: [
-                    Image(
+                    const Image(
                       image: NetworkImage(
                           'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                      height: 75,
-                      width: 75,
+                      width: 25,
+                      height: 25,
                     ),
-                    Text('Sony Official Store')
+                    Text(store[index])
                   ],
+                ),
+                Container(
+                  color: Colors.grey,
+                  child: Row(
+                    children: [
+                      Image(
+                        image: NetworkImage(
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
+                        height: 50,
+                        width: 59,
+                      ),
+                      Column(
+                        children: [
+                          Row(
+                            children: [Text(product[index])],
+                          ),
+                          Row(
+                            children: [Text('Rp. ${price[index]}')],
+                          )
+                        ],
+                      )
+                    ],
+                  ),
                 )
               ],
             ),
-          ),
-          const Column(
-            children: [
-              Row(
-                children: [
-                  Text('1x'),
-                  Image(
-                    image: NetworkImage(
-                        'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                    height: 50,
-                    width: 50,
-                  ),
-                  Column(
-                    children: [
-                      Row(
-                        children: [Text('PlayStation 5')],
-                      ),
-                      Row(
-                        children: [Text('Rp. 8.999.999')],
-                      )
-                    ],
-                  )
-                ],
-              ),
-            ],
-          )
-        ],
+          );
+        },
+        separatorBuilder: (BuildContext context, int index) => const Divider(),
       ),
     );
   }
