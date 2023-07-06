@@ -25,7 +25,10 @@ class Catalog extends StatelessWidget {
       '1.999.999',
       '4.999.999'
     ];
-    final List<String> imageList = <String>[''];
+    final List<String> imageList = <String>[
+      '',
+      '',
+    ];
 
     return Scaffold(
       appBar: AppBar(
