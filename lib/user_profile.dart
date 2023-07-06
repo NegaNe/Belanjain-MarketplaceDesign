@@ -55,43 +55,6 @@ class UserProfile extends StatelessWidget {
                   width: 100,
                   height: 100,
                 ),
-                // const Column(
-                //   children: [
-                //     Text(
-                //       'Petter Official Store',
-                //       style: TextStyle(
-                //         fontSize: 20,
-                //         color: Color(0xffFFFFFF),
-                //         fontWeight: FontWeight.w800,
-                //       ),
-                //     ),
-                //     Row(
-                //       children: [
-                //         Text(
-                //           'Followers: 11k',
-                //           style: TextStyle(
-                //             fontSize: 10,
-                //             color: Color(0xffFFFFFF),
-                //           ),
-                //         ),
-                //         Text(
-                //           '\t\t|\t\t',
-                //           style: TextStyle(
-                //             fontSize: 10,
-                //             color: Color(0xffFFFFFF),
-                //           ),
-                //         ),
-                //         Text(
-                //           'Following: 30k',
-                //           style: TextStyle(
-                //             fontSize: 10,
-                //             color: Color(0xffFFFFFF),
-                //           ),
-                //         ),
-                //       ],
-                //     )
-                //   ],
-                // ),
                 const Row(
                   children: [
                     Text.rich(TextSpan(children: [
