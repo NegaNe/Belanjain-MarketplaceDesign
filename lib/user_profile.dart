@@ -18,8 +18,9 @@ class UserProfile extends StatelessWidget {
             color: Color(0xffFFFFFF),
             tooltip: 'Chat',
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a chat')));
+              Navigator.pushNamed(context, '/chat');
+              //ScaffoldMessenger.of(context).showSnackBar(
+              //    const SnackBar(content: Text('This is a chat')));
             },
           ),
           IconButton(
