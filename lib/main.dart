@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:marketplace/chat_page.dart';
 import 'package:marketplace/discover_page.dart';
 import 'package:marketplace/payment.dart';
+import 'package:marketplace/product_page.dart';
 import 'register_page.dart';
 import 'login_page.dart';
 import 'setting_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
         '/payment': (context) => const Payment(),
         '/chat': (context) => const chatPage(),
         '/discover': (context) => const DiscoverPage(),
+        '/product': (context) => const ProductPage(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),

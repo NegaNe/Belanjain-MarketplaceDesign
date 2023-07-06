@@ -222,6 +222,12 @@ class _HomePageState extends State<HomePage> {
                     Navigator.pushNamed(context, '/chat');
                   },
                   child: const Text('Go To Chat')),
+              TextButton(
+                  //copy dari sini
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/product');
+                  },
+                  child: const Text('Go To ProductPage')),
             ],
           )
         ],
