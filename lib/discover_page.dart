@@ -5,6 +5,20 @@ class DiscoverPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return Scaffold(
+      appBar: AppBar(
+          title: Column(
+        children: <Widget>[
+          Align(
+            alignment: Alignment.centerRight,
+            child: Container(
+              color: Colors.red,
+              child: Text('data'),
+            ),
+          ),
+          Title(color: Colors.black, child: Text('Discover'))
+        ],
+      )),
+    );
   }
 }

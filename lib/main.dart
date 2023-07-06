@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:marketplace/chat_page.dart';
+import 'package:marketplace/discover_page.dart';
 import 'package:marketplace/payment.dart';
 import 'register_page.dart';
 import 'login_page.dart';
@@ -30,6 +31,7 @@ class MyApp extends StatelessWidget {
         '/catalog': (context) => const Catalog(),
         '/payment': (context) => const Payment(),
         '/chat': (context) => const chatPage(),
+        '/discover': (context) => const DiscoverPage(),
       },
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),

@@ -164,7 +164,7 @@ class _HomePageState extends State<HomePage> {
                           borderRadius:
                               BorderRadius.all(Radius.circular(9.0)))),
                   onPressed: () {
-                    Navigator.pushNamed(context, '/profile');
+                    Navigator.pushNamed(context, '/login');
                   },
                   child: Text(
                     'SIGN UP',

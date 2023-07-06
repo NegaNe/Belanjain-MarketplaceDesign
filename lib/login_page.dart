@@ -105,7 +105,7 @@ class LoginPage extends StatelessWidget {
                           borderRadius: BorderRadius.circular(9.0)),
                       backgroundColor: const Color(0XFF6D6E4C)),
                   onPressed: () {
-                     Navigator.pushNamed(context, '/catalog');
+                    Navigator.pushNamed(context, '/discover');
                   },
                   child: const Padding(
                     padding: EdgeInsets.fromLTRB(133, 5, 133, 5),
