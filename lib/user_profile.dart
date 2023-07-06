@@ -12,10 +12,10 @@ class UserProfile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Petter Official Store'),
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.chat),
+            color: Color(0xffFFFFFF),
             tooltip: 'Chat',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -24,6 +24,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart),
+            color: Color(0xffFFFFFF),
             tooltip: 'Cart',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -32,6 +33,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.settings),
+            color: Color(0xffFFFFFF),
             tooltip: 'Setting',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -39,16 +41,110 @@ class UserProfile extends StatelessWidget {
             },
           ),
         ],
-        backgroundColor: Colors.amber,
+        backgroundColor: Color(0xff6D6E4C),
       ),
       body: Column(
         children: [
           Container(
-            color: Colors.amber,
-            height: 150,
+            color: Color(0xff6D6E4C),
+            child: Row(
+              children: [
+                Image(
+                  image: NetworkImage(URL),
+                  width: 100,
+                  height: 100,
+                ),
+                // const Column(
+                //   children: [
+                //     Text(
+                //       'Petter Official Store',
+                //       style: TextStyle(
+                //         fontSize: 20,
+                //         color: Color(0xffFFFFFF),
+                //         fontWeight: FontWeight.w800,
+                //       ),
+                //     ),
+                //     Row(
+                //       children: [
+                //         Text(
+                //           'Followers: 11k',
+                //           style: TextStyle(
+                //             fontSize: 10,
+                //             color: Color(0xffFFFFFF),
+                //           ),
+                //         ),
+                //         Text(
+                //           '\t\t|\t\t',
+                //           style: TextStyle(
+                //             fontSize: 10,
+                //             color: Color(0xffFFFFFF),
+                //           ),
+                //         ),
+                //         Text(
+                //           'Following: 30k',
+                //           style: TextStyle(
+                //             fontSize: 10,
+                //             color: Color(0xffFFFFFF),
+                //           ),
+                //         ),
+                //       ],
+                //     )
+                //   ],
+                // ),
+                const Row(
+                  children: [
+                    Text.rich(TextSpan(children: [
+                      TextSpan(
+                          text: 'Petter Official Store\n',
+                          style: TextStyle(fontSize: 20, color: Colors.white)),
+                      TextSpan(
+                          text: 'Followers: 11k | Following: 10k',
+                          style: TextStyle(fontSize: 10, color: Colors.white))
+                    ]))
+                  ],
+                )
+              ],
+            ),
           ),
           const SizedBox(
             height: 55,
+          ),
+          Expanded(
+            child: RowReuseable(
+              row: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Row(
+                      children: [
+                        Text(
+                          'My Purchases',
+                          style: TextStyle(
+                            fontSize: 20,
+                            color: Color(0xffFFFFFF),
+                          ),
+                        ),
+                        Image(
+                          image: NetworkImage(URL),
+                          width: 50,
+                          height: 50,
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Container(
+                          child: Text(
+                            'Lihat Riwayat Pesanan',
+                            style: TextStyle(
+                              fontSize: 10,
+                              color: Color(0xffB5B4B4),
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ]),
+            ),
           ),
           Expanded(
             child: RowReuseable(
@@ -60,6 +156,9 @@ class UserProfile extends StatelessWidget {
                 ),
                 Text(
                   'To Pay',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
                 ),
               ]),
             ),
@@ -72,7 +171,12 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Ship'),
+                Text(
+                  'To Ship',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
               ]),
             ),
           ),
@@ -84,7 +188,12 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Receive'),
+                Text(
+                  'To Receive',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
               ]),
             ),
           ),
@@ -96,12 +205,34 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text('To Rate'),
+                Text(
+                  'To Rate',
+                  style: TextStyle(
+                    color: Color(0xffFFFFFF),
+                  ),
+                ),
               ]),
             ),
           ),
           SizedBox(
-            height: 300,
+            height: 200,
+          ),
+          SizedBox(
+            child: Container(
+              decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
+              child: TextButton(
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/login');
+                  },
+                  child: Text(
+                    "Logout",
+                    style: TextStyle(color: Color(0xffFFFFFF)),
+                  )),
+              width: 150,
+            ),
+          ),
+          SizedBox(
+            height: 25,
           )
         ],
       ),
