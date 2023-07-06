@@ -32,7 +32,12 @@ class Catalog extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Catalog'),
+        title: const Row(
+          children: [
+            Text('Catalog '),
+            Icon(Icons.shopping_cart),
+          ],
+        ),
       ),
       body: ListView.separated(
         padding: const EdgeInsets.all(8),
