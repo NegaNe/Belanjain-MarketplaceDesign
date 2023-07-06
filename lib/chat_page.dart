@@ -27,46 +27,49 @@ class chatPage extends StatelessWidget {
         ),
         bottomNavigationBar: BottomAppBar(
           //Padding(
-      padding:EdgeInsets.all(10),
-      child: Row(
-        children: [
-          Expanded(
-            child: Card(
-              shape:
-                  RoundedRectangleBorder(borderRadius: BorderRadius.circular(15)),
-              child: const Row(
-                children: [
-                  Expanded(
-                      child: TextField(
-                        keyboardType: TextInputType.multiline,
-                        maxLines: null,
-                    decoration: InputDecoration(
-                      hintStyle: TextStyle(color: Colors.grey),
-                      hintText: "      Tulis Pesan",
-                      border: InputBorder.none,
-                    ),
-                  )),
-                ],
+          padding: EdgeInsets.all(10),
+          child: Row(
+            children: [
+              Expanded(
+                child: Card(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Container(
+                            margin: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                            child: const TextField(
+                              keyboardType: TextInputType.multiline,
+                              maxLines: null,
+                              decoration: InputDecoration(
+                                hintStyle: TextStyle(color: Colors.grey),
+                                hintText: "Tulis Pesan",
+                                border: InputBorder.none,
+                              ),
+                            )),
+                      )
+                    ],
+                  ),
+                ),
               ),
-            ),
+              MaterialButton(
+                onPressed: () {},
+                minWidth: 0,
+                padding:
+                    EdgeInsets.only(top: 10, bottom: 10, right: 10, left: 10),
+                shape: CircleBorder(),
+                child: const Icon(
+                  Icons.send,
+                  color: Colors.black,
+                  size: 28,
+                ),
+              )
+            ],
           ),
-          MaterialButton(
-            onPressed: () {},
-            minWidth: 0,
-            padding: EdgeInsets.only(top: 10,bottom: 10,right: 10,left: 10),
-            shape: CircleBorder(),
-            child: const Icon(
-              Icons.send,
-              color: Colors.black,
-              size: 28,),
-          )
-        ],
-      ),
-    ),
-    
+        ),
 
-
-          /*
+        /*
           color: Colors.white,
           child: Container(
             alignment: Alignment.center,
@@ -83,7 +86,7 @@ class chatPage extends StatelessWidget {
               ),
             ),
           ),*/
-        
+
         body: Container(
             // decoration: BoxDecoration(border: Border.all(width: 1)),
             margin: const EdgeInsets.all(15),
