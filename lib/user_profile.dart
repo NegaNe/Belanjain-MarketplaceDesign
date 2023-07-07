@@ -15,7 +15,7 @@ class UserProfile extends StatelessWidget {
         actions: <Widget>[
           IconButton(
             icon: const Icon(Icons.chat),
-            color: Color(0xffFFFFFF),
+            color: const Color(0xffFFFFFF),
             tooltip: 'Chat',
             onPressed: () {
               Navigator.pushNamed(context, '/chat');
@@ -25,7 +25,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.shopping_cart),
-            color: Color(0xffFFFFFF),
+            color: const Color(0xffFFFFFF),
             tooltip: 'Cart',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -34,7 +34,7 @@ class UserProfile extends StatelessWidget {
           ),
           IconButton(
             icon: const Icon(Icons.settings),
-            color: Color(0xffFFFFFF),
+            color: const Color(0xffFFFFFF),
             tooltip: 'Setting',
             onPressed: () {
               ScaffoldMessenger.of(context).showSnackBar(
@@ -42,12 +42,12 @@ class UserProfile extends StatelessWidget {
             },
           ),
         ],
-        backgroundColor: Color(0xff6D6E4C),
+        backgroundColor: const Color(0xff6D6E4C),
       ),
       body: Column(
         children: [
           Container(
-            color: Color(0xff6D6E4C),
+            color: const Color(0xff6D6E4C),
             child: Row(
               children: [
                 Image(
@@ -80,7 +80,7 @@ class UserProfile extends StatelessWidget {
                   children: [
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           'My Purchases',
                           style: TextStyle(
                             fontSize: 20,
@@ -96,8 +96,9 @@ class UserProfile extends StatelessWidget {
                     ),
                     Row(
                       children: [
+                        // ignore: avoid_unnecessary_containers
                         Container(
-                          child: Text(
+                          child: const Text(
                             'Lihat Riwayat Pesanan',
                             style: TextStyle(
                               fontSize: 10,
@@ -118,7 +119,7 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text(
+                const Text(
                   'To Pay',
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
@@ -135,7 +136,7 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text(
+                const Text(
                   'To Ship',
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
@@ -152,7 +153,7 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text(
+                const Text(
                   'To Receive',
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
@@ -169,7 +170,7 @@ class UserProfile extends StatelessWidget {
                   width: 50,
                   height: 50,
                 ),
-                Text(
+                const Text(
                   'To Rate',
                   style: TextStyle(
                     color: Color(0xffFFFFFF),
@@ -178,24 +179,24 @@ class UserProfile extends StatelessWidget {
               ]),
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 200,
           ),
           SizedBox(
             child: Container(
-              decoration: BoxDecoration(color: Color(0XFF6D6E4C)),
+              decoration: const BoxDecoration(color: Color(0XFF6D6E4C)),
+              width: 150,
               child: TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/login');
                   },
-                  child: Text(
+                  child: const Text(
                     "Logout",
                     style: TextStyle(color: Color(0xffFFFFFF)),
                   )),
-              width: 150,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 25,
           )
         ],
