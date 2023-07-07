@@ -8,12 +8,11 @@ class Catalog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final List<String> store = <String>[
-      'Sony',
-      'Apple',
-      'Cherry MX',
-      'Smasnug'
-    ];
-    final List<String> product = <String>[
+      'Sony', 
+      'Apple', 
+      'Cherry MX', 
+      'Smasnug'];
+    final  List<String> product = <String>[
       'Sony PlayStation 4',
       'MacBook Air M2',
       'Cherry ',

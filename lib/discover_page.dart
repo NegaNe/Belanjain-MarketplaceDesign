@@ -114,9 +114,9 @@ class DiscoverPage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const Row(
+                  Row(
                     children: [
-                      const Column(
+                      Column(
                         children: [
                           Text.rich(TextSpan(children: [
                             TextSpan(
@@ -130,21 +130,108 @@ class DiscoverPage extends StatelessWidget {
                       ),
                       Column(
                         children: [
-                          Align(
-                            alignment: Alignment.centerRight,
+                          Container(
+                            margin: EdgeInsets.fromLTRB(120, 0, 0, 0),
+                            // alignment: Alignment.centerRight,
                             child: Image(
                               image: NetworkImage(
                                   'https://fdn2.gsmarena.com/vv/bigpic/asus-zenfone-9-new.jpg'),
-                              width: 150,
-                              height: 150,
                             ),
-                          )
+                          ),
                         ],
                       )
                     ],
                   ),
                 ],
               ),
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
+                    child: Image(
+                        image: NetworkImage(
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
+                        width: 190,
+                        height: 190),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
+                    child: Image(
+                        image: NetworkImage(
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
+                        width: 190,
+                        height: 190),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.grey,
+                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
+                    child: Text("tes"),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.grey,
+                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
+                    child: Text("tes"),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
+                    child: Image(
+                        image: NetworkImage(
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
+                        width: 190,
+                        height: 190),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.amber,
+                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
+                    child: Image(
+                        image: NetworkImage(
+                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
+                        width: 190,
+                        height: 190),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              children: [
+                Expanded(
+                  child: Container(
+                    color: Colors.grey,
+                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
+                    child: Text("tes"),
+                  ),
+                ),
+                Expanded(
+                  child: Container(
+                    color: Colors.grey,
+                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
+                    child: Text("tes"),
+                  ),
+                ),
+              ],
             ),
           ],
         ),
