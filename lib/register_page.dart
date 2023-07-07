@@ -154,10 +154,10 @@ class _HomePageState extends State<HomePage> {
             child: Container(
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(9.0),
-                  color: Color(0XFF6D6E4C)),
+                  color: const Color(0XFF6D6E4C)),
               height: 40,
               width: 375,
-              margin: EdgeInsetsDirectional.all(15),
+              margin: const EdgeInsetsDirectional.all(15),
               child: TextButton(
                   style: TextButton.styleFrom(
                       shape: const RoundedRectangleBorder(
@@ -166,7 +166,7 @@ class _HomePageState extends State<HomePage> {
                   onPressed: () {
                     Navigator.pushNamed(context, '/login');
                   },
-                  child: Text(
+                  child: const Text(
                     'SIGN UP',
                     style: TextStyle(
                       fontFamily: 'Lato',
@@ -176,7 +176,7 @@ class _HomePageState extends State<HomePage> {
                   )),
             ),
           ),
-          SizedBox(height: 1),
+          const SizedBox(height: 1),
           Center(
             child: TextButton(
               onPressed: () {
