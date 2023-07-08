@@ -28,14 +28,85 @@ class DiscoverPage extends StatelessWidget {
         body: Container(
             child: Column(children: [
           Container(
-            padding: const EdgeInsets.all(25),
-            margin: const EdgeInsets.only(right: 100),
+            padding: const EdgeInsets.all(5),
+            margin: const EdgeInsets.all(10),
+            height: 45,
+            decoration: BoxDecoration(
+              border: Border.all(color: Color(0xffD9D9D9D9)),
+              borderRadius: BorderRadius.circular(10),
+            ),
             child: const TextField(
               decoration: InputDecoration(
                   labelText: 'Search',
                   suffixIcon: Icon(Icons.search),
                   border: InputBorder.none),
             ),
+          ),
+          Row(
+            children: [
+              Container(
+                padding: const EdgeInsets.all(5),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xFF6D6E4C),
+                ),
+                child: TextButton(
+                  onPressed: () {
+
+                  },
+                  child: Text(
+                    'Electronic',
+                    style: TextStyle(
+                      fontFamily: 'Oswald',
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xffFFFFFF),
+                    ),
+                  )),
+              ),
+              Container(
+                padding: const EdgeInsets.all(5),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1.5, color: Color(0xffD9D9D9D9)),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xFFFFFFFF),
+                ),
+                child: TextButton(
+                  onPressed: () {
+
+                  },
+                  child: Text(
+                    'Appliance',
+                    style: TextStyle(
+                      fontFamily: 'Oswald',
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xff000000),
+                    ),
+                  )),
+              ),
+              Container(
+                padding: const EdgeInsets.all(5),
+                margin: EdgeInsets.all(10),
+                decoration: BoxDecoration(
+                  border: Border.all(width: 1.5, color: Color(0xffD9D9D9D9)),
+                  borderRadius: BorderRadius.circular(10),
+                  color: Color(0xFFFFFFFF),
+                ),
+                child: TextButton(
+                  onPressed: () {
+
+                  },
+                  child: Text(
+                    'Handphone',
+                    style: TextStyle(
+                      fontFamily: 'Oswald',
+                      fontWeight: FontWeight.w900,
+                      color: Color(0xff000000),
+                    ),
+                  )),
+              ),
+            ],
           ),
           Expanded(
               child: ListView(
@@ -49,7 +120,7 @@ class DiscoverPage extends StatelessWidget {
                     child: Column(
                       children: [
                         Text(
-                          'Featured',
+                          'Mega Sale',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 24),
                         ),
