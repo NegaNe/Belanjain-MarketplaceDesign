@@ -56,7 +56,7 @@ class ProductPage extends StatelessWidget {
                 )
               ],
             )),
-        body: Column(
+        body: ListView(
           children: [
             Column(
               children: [
