@@ -9,7 +9,7 @@ import 'register_page.dart';
 import 'login_page.dart';
 import 'setting_page.dart';
 import 'user_profile.dart';
-import 'catalog_page.dart';
+import 'cart_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         '/login': (context) => const LoginPage(),
         '/setting': (context) => const Setting(),
         '/profile': (context) => const UserProfile(),
-        '/catalog': (context) => const Catalog(),
+        '/cart': (context) => const Cart(),
         '/payment': (context) => const Payment(),
         '/chat': (context) => const chatPage(),
         '/discover': (context) => const DiscoverPage(),

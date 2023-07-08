@@ -2,17 +2,18 @@
 
 import 'package:flutter/material.dart';
 
-class Catalog extends StatelessWidget {
-  const Catalog({super.key});
+class Cart extends StatelessWidget {
+  const Cart({super.key});
 
   @override
   Widget build(BuildContext context) {
     final List<String> store = <String>[
-      'Sony', 
-      'Apple', 
-      'Cherry MX', 
-      'Smasnug'];
-    final  List<String> product = <String>[
+      'Sony',
+      'Apple',
+      'Cherry MX',
+      'Smasnug'
+    ];
+    final List<String> product = <String>[
       'Sony PlayStation 4',
       'MacBook Air M2',
       'Cherry ',
@@ -33,9 +34,34 @@ class Catalog extends StatelessWidget {
       appBar: AppBar(
         title: const Row(
           children: [
-            Text('Catalog '),
+            Text('Cart '),
             Icon(Icons.shopping_cart),
           ],
+        ),
+      ),
+      bottomNavigationBar: BottomAppBar(
+        color: Color.fromRGBO(255, 255, 255, 1),
+        child: Center(
+          child: FractionallySizedBox(
+            widthFactor: 0.15,
+            child: InkWell(
+              child: Container(
+                  alignment: Alignment.center,
+                  decoration: BoxDecoration(
+                      color: Color(0XFF6D6E4C),
+                      borderRadius: BorderRadius.circular(15)),
+                  child: Text(
+                    "Payment",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 20,
+                    ),
+                  )),
+              onTap: () {
+                Navigator.pushNamed(context, '/payment');
+              },
+            ),
+          ),
         ),
       ),
       body: ListView.separated(

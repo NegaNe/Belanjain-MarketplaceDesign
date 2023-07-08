@@ -196,9 +196,9 @@ class _HomePageState extends State<HomePage> {
             children: [
               TextButton(
                   onPressed: () {
-                    Navigator.pushNamed(context, '/catalog');
+                    Navigator.pushNamed(context, '/cart');
                   },
-                  child: const Text("Go To Catalog")),
+                  child: const Text("Go To Cart")),
               TextButton(
                   onPressed: () {
                     Navigator.pushNamed(context, '/setting');

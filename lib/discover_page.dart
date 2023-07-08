@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/cart_page.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
@@ -7,13 +8,21 @@ class DiscoverPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Row(
+        title: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Text('Discover'),
+            const Text('Discover'),
             Row(
               children: [
-                Icon(Icons.shopping_cart_rounded),
+                IconButton(
+                  icon: const Icon(
+                    Icons.shopping_cart_rounded,
+                  ),
+                  //tooltip: 'Catalog',
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/cart');
+                  },
+                ),
                 Icon(Icons.notifications)
               ],
             )
@@ -238,4 +247,8 @@ class DiscoverPage extends StatelessWidget {
       )),
     );
   }
+}
+
+void _oncatalogbutton() {
+  print("Tester");
 }

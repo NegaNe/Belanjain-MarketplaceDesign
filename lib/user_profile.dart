@@ -28,8 +28,9 @@ class UserProfile extends StatelessWidget {
             color: Color(0xffFFFFFF),
             tooltip: 'Cart',
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a cart list')));
+              Navigator.pushNamed(context, '/cart');
+              //ScaffoldMessenger.of(context).showSnackBar(
+              //  const SnackBar(content: Text('This is a cart list')));
             },
           ),
           IconButton(
@@ -37,8 +38,9 @@ class UserProfile extends StatelessWidget {
             color: Color(0xffFFFFFF),
             tooltip: 'Setting',
             onPressed: () {
-              ScaffoldMessenger.of(context).showSnackBar(
-                  const SnackBar(content: Text('This is a setting')));
+              Navigator.pushNamed(context, '/setting');
+              // ScaffoldMessenger.of(context).showSnackBar(
+              //     const SnackBar(content: Text('This is a setting')));
             },
           ),
         ],
