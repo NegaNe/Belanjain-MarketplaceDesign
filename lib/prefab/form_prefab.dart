@@ -1,17 +1,57 @@
 import 'package:flutter/material.dart';
 
-class FormPage extends StatelessWidget {
-  const FormPage({super.key, this.text});
+class CardReuseable extends StatelessWidget {
+  const CardReuseable({super.key, required this.url});
 
-  final Text? text;
+  final String url;
+
   @override
   Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.all(10),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(10),
+    return Row(children: <Widget>[
+      Expanded(
+        //copy from here
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: InkWell(
+              splashColor: Colors.blue.withAlpha(30),
+              onTap: () {},
+              child: Container(
+                  // height: 100,
+                  child: Column(children: [
+                Image(
+                  image: NetworkImage(url),
+                  height: 100,
+                ),
+                Text('PlayStation 5'),
+                Text('Rp. 9000')
+              ])),
+            ),
+          ),
+        ),
+      ), //to here
+      Expanded(
+        //copy from here
+        child: Padding(
+          padding: const EdgeInsets.all(8.0),
+          child: Card(
+            child: InkWell(
+              splashColor: Colors.blue.withAlpha(30),
+              onTap: () {},
+              child: Container(
+                  // height: 100,
+                  child: Column(children: [
+                Image(
+                  image: NetworkImage(url),
+                  height: 100,
+                ),
+                Text('PlayStation 5'),
+                Text('Rp. 9000')
+              ])),
+            ),
+          ),
+        ),
       ),
-      child: const Text(''),
-    );
+    ]);
   }
 }

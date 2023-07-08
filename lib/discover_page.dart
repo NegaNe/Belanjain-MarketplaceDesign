@@ -1,254 +1,97 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/cart_page.dart';
+import 'package:marketplace/prefab/form_prefab.dart';
 
 class DiscoverPage extends StatelessWidget {
   const DiscoverPage({super.key});
 
+  final String url =
+      'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png';
+  // final List<String> entries = <String>['A', 'B', 'C', 'D', 'E', 'F'];
+  // final List<int> colorCodes = <int>[600, 500, 100, 200, 400, 300];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const Text('Discover'),
-            Row(
-              children: [
-                IconButton(
-                  icon: const Icon(
-                    Icons.shopping_cart_rounded,
+        appBar: AppBar(
+          actions: [
+            Container(
+                margin: EdgeInsets.all(15),
+                child: Row(children: [
+                  Icon(Icons.shopping_cart),
+                  SizedBox(
+                    width: 15,
                   ),
-                  //tooltip: 'Catalog',
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/cart');
-                  },
-                ),
-                Icon(Icons.notifications)
-              ],
-            )
+                  Icon(Icons.notifications)
+                ]))
           ],
+          title: Text('Discover'),
         ),
-      ),
-      body: SafeArea(
-          child: Container(
-        child: Column(
-          children: [
-            Container(
-                decoration: BoxDecoration(
-                    border: Border.all(width: 1),
-                    borderRadius: BorderRadius.circular(5)),
-                margin: EdgeInsets.fromLTRB(25, 0, 25, 0),
-                padding: EdgeInsets.only(left: 10),
-                child: const TextField(
-                  decoration: InputDecoration(
-                      border: InputBorder.none,
-                      suffixIcon: Icon(Icons.apps),
-                      icon: Icon(
-                        Icons.search,
-                      ),
-                      hintText: 'Search'),
-                )),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Container(
-                  decoration: BoxDecoration(
-                    border: Border.all(width: 0.4),
-                    color: Color.fromRGBO(109, 110, 76, 1),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  margin: const EdgeInsets.fromLTRB(5, 25, 5, 25),
-                  padding: EdgeInsets.all(10),
-                  child: Text(
-                    'Electronic',
-                    style: TextStyle(color: Colors.white),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 0.4),
-                      borderRadius: BorderRadius.circular(10)),
-                  child: Text('Appliance'),
-                ),
-                Container(
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 0.4),
-                      borderRadius: BorderRadius.circular(10)),
-                  margin: const EdgeInsets.fromLTRB(5, 25, 5, 25),
-                  padding: EdgeInsets.all(10),
-                  child: Text('Headphone'),
-                )
-              ],
+        body: Container(
+            child: Column(children: [
+          Container(
+            padding: const EdgeInsets.all(25),
+            margin: const EdgeInsets.only(right: 100),
+            child: const TextField(
+              decoration: InputDecoration(
+                  labelText: 'Search',
+                  suffixIcon: Icon(Icons.search),
+                  border: InputBorder.none),
             ),
-            Container(
-              padding: const EdgeInsets.fromLTRB(0, 15, 0, 15),
-              decoration: BoxDecoration(
-                  border: Border(
-                      top: BorderSide(width: 1), bottom: BorderSide(width: 1))),
-              alignment: Alignment.center,
-              child: Text('MEGA SALE',
-                  style: TextStyle(fontWeight: FontWeight.bold)),
-            ),
-            //BOX OREN
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.orange,
-              ),
-              margin: EdgeInsets.fromLTRB(15, 5, 15, 5),
-              padding: EdgeInsets.all(25),
-              child: Column(
+          ),
+          Expanded(
+              child: ListView(
+            children: <Widget>[
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Row(
-                    children: [],
-                  ),
-                  Row(
-                    children: [
-                      const Image(
-                        image: NetworkImage(
-                            'https://images.tokopedia.net/img/cache/215-square/shops-1/2018/3/19/2972075/2972075_69c19edf-5f84-4569-8226-9a9e51e54559.jpg'),
-                        width: 40,
-                        height: 40,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.all(10),
-                        child: const Text.rich(TextSpan(children: [
-                          TextSpan(
-                              text: 'ASUS Official Store\n',
-                              style: TextStyle(
-                                  fontSize: 16, fontWeight: FontWeight.w600)),
-                          TextSpan(
-                              text: 'Online', style: TextStyle(fontSize: 11))
-                        ])),
-                      ),
-                    ],
-                  ),
-                  Row(
-                    children: [
-                      Column(
-                        children: [
-                          Text.rich(TextSpan(children: [
-                            TextSpan(
-                              text: 'From\n',
+                  Container(
+                    padding: EdgeInsets.all(25),
+                    color: Colors.blue.shade300,
+                    child: Column(
+                      children: [
+                        Text(
+                          'Featured',
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 24),
+                        ),
+                        Row(
+                          children: [
+                            const Column(
+                              children: [
+                                Text('ASUS Official Store'),
+                                Text('ASUS Zenfone 10'),
+                                Text('Rp. 8.999.999'),
+                              ],
                             ),
-                            TextSpan(text: 'Rp. 9.999.999\n'),
-                            TextSpan(text: 'To\n'),
-                            TextSpan(text: 'Rp. 6.499.999')
-                          ])),
-                        ],
-                      ),
-                      Column(
-                        children: [
-                          Container(
-                            margin: EdgeInsets.fromLTRB(120, 0, 0, 0),
-                            // alignment: Alignment.centerRight,
-                            child: Image(
-                              image: NetworkImage(
-                                  'https://fdn2.gsmarena.com/vv/bigpic/asus-zenfone-9-new.jpg'),
-                            ),
-                          ),
-                        ],
-                      )
-                    ],
-                  ),
+                            Container(
+                              margin: const EdgeInsets.all(25),
+                              decoration: BoxDecoration(
+                                  border:
+                                      Border.all(width: 3, color: Colors.white),
+                                  borderRadius: BorderRadius.circular(8)),
+                              child: const Image(
+                                image: NetworkImage(
+                                    'https://media.pricebook.co.id/images/product/L/98946_L_1.jpg'),
+                                width: 150,
+                                height: 150,
+                              ),
+                            )
+                          ],
+                        ),
+                      ],
+                    ),
+                  )
                 ],
               ),
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.amber,
-                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
-                    child: Image(
-                        image: NetworkImage(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                        width: 190,
-                        height: 190),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    color: Colors.amber,
-                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
-                    child: Image(
-                        image: NetworkImage(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                        width: 190,
-                        height: 190),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.grey,
-                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
-                    child: Text("tes"),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    color: Colors.grey,
-                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
-                    child: Text("tes"),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.amber,
-                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
-                    child: Image(
-                        image: NetworkImage(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                        width: 190,
-                        height: 190),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    color: Colors.amber,
-                    margin: EdgeInsets.fromLTRB(30, 15, 30, 5),
-                    child: Image(
-                        image: NetworkImage(
-                            'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                        width: 190,
-                        height: 190),
-                  ),
-                ),
-              ],
-            ),
-            Row(
-              children: [
-                Expanded(
-                  child: Container(
-                    color: Colors.grey,
-                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
-                    child: Text("tes"),
-                  ),
-                ),
-                Expanded(
-                  child: Container(
-                    color: Colors.grey,
-                    margin: EdgeInsets.fromLTRB(30, 0, 30, 5),
-                    child: Text("tes"),
-                  ),
-                ),
-              ],
-            ),
-          ],
-        ),
-      )),
-    );
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+              CardReuseable(url: url),
+            ],
+          ))
+        ])));
   }
-}
-
-void _oncatalogbutton() {
-  print("Tester");
 }
