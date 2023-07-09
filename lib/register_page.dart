@@ -192,44 +192,44 @@ class _HomePageState extends State<HomePage> {
             ),
           ),
 
-          Column(
-            children: [
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/catalog');
-                  },
-                  child: const Text("Go To Catalog")),
-              TextButton(
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/setting');
-                  },
-                  child: const Text('Go To Settings')),
-              TextButton(
-                  //copy dari sini
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/profile');
-                  },
-                  child: const Text('Go To Profile')),
-              TextButton(
-                  //copy dari sini
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/payment');
-                  },
-                  child: const Text('Go To Payment')),
-              TextButton(
-                  //copy dari sini
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/chat');
-                  },
-                  child: const Text('Go To Chat')),
-              TextButton(
-                  //copy dari sini
-                  onPressed: () {
-                    Navigator.pushNamed(context, '/product');
-                  },
-                  child: const Text('Go To ProductPage')),
-            ],
-          )
+          // Column(
+          //   children: [
+          //     TextButton(
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/catalog');
+          //         },
+          //         child: const Text("Go To Catalog")),
+          //     TextButton(
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/setting');
+          //         },
+          //         child: const Text('Go To Settings')),
+          //     TextButton(
+          //         //copy dari sini
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/profile');
+          //         },
+          //         child: const Text('Go To Profile')),
+          //     TextButton(
+          //         //copy dari sini
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/payment');
+          //         },
+          //         child: const Text('Go To Payment')),
+          //     TextButton(
+          //         //copy dari sini
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/chat');
+          //         },
+          //         child: const Text('Go To Chat')),
+          //     TextButton(
+          //         //copy dari sini
+          //         onPressed: () {
+          //           Navigator.pushNamed(context, '/product');
+          //         },
+          //         child: const Text('Go To ProductPage')),
+          //   ],
+          // )
         ],
       ),
     );
