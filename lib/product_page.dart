@@ -19,7 +19,7 @@ class ProductPage extends StatelessWidget {
         ),
 
         bottomNavigationBar: BottomAppBar(
-            color: Colors.white,
+            color: Color(0XFF6D6E4C),
             padding: EdgeInsets.all(20),
             child: Row(
               children: [
@@ -28,6 +28,7 @@ class ProductPage extends StatelessWidget {
                         TextStyle(
                           fontWeight: FontWeight.bold, fontSize: 24,
                           fontFamily: 'OswaldReg',
+                          color: Colors.white,
                           ),
                           ),
                 const Expanded(
@@ -61,7 +62,7 @@ class ProductPage extends StatelessWidget {
                     width: 50,
                     height: 50,
                     decoration: BoxDecoration(
-                        color: Color.fromRGBO(100, 110, 76, 1),
+                        color: Colors.black,
                         borderRadius: BorderRadius.circular(20)),
                     child: Icon(
                       Icons.message_sharp,
