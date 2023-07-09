@@ -25,6 +25,7 @@ class Cart extends StatelessWidget {
       '1.999.999',
       '4.999.999'
     ];
+    // ignore: unused_local_variable
     final List<String> imageList = <String>[
       '',
       '',
@@ -40,7 +41,7 @@ class Cart extends StatelessWidget {
         ),
       ),
       bottomNavigationBar: BottomAppBar(
-        color: Color.fromRGBO(255, 255, 255, 1),
+        color: const Color.fromRGBO(255, 255, 255, 1),
         child: Center(
           child: FractionallySizedBox(
             widthFactor: 1,
@@ -48,9 +49,9 @@ class Cart extends StatelessWidget {
               child: Container(
                   alignment: Alignment.center,
                   decoration: BoxDecoration(
-                      color: Color(0XFF6D6E4C),
+                      color: const Color(0XFF6D6E4C),
                       borderRadius: BorderRadius.circular(15)),
-                  child: Text(
+                  child: const Text(
                     "Payment",
                     style: TextStyle(
                       color: Colors.white,
@@ -82,26 +83,25 @@ class Cart extends StatelessWidget {
                     ),
                     Text(
                       store[index],
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontFamily: 'OswaldReg',
                       ),
                     ),
                   ],
                 ),
-                SizedBox(
+                const SizedBox(
                   height: 10,
                 ),
                 Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 0, 20),
+                  padding: const EdgeInsets.fromLTRB(10, 10, 0, 20),
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
                     ),
-                    color: Color(0xffE0E0D9),
+                    color: const Color(0xffE0E0D9),
                   ),
                   child: Row(
                     children: [
-                      Text('1x'),
                       const Image(
                         image: NetworkImage(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
@@ -114,7 +114,7 @@ class Cart extends StatelessWidget {
                             children: [
                               Text(
                                 product[index],
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontFamily: 'OswaldReg',
                                 ),
                               )
@@ -124,7 +124,7 @@ class Cart extends StatelessWidget {
                             children: [
                               Text(
                                 'Rp. ${price[index]}',
-                                style: TextStyle(
+                                style: const TextStyle(
                                   fontFamily: 'OswaldReg',
                                 ),
                               ),

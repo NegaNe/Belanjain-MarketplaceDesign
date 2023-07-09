@@ -55,7 +55,8 @@ class Payment extends StatelessWidget {
                 decoration: BoxDecoration(
                   color: const Color(0xffFBFBFB),
                   border: Border.all(
-                      width: 1, color: Color.fromARGB(255, 163, 163, 163)),
+                      width: 1,
+                      color: const Color.fromARGB(255, 163, 163, 163)),
                   // color: Color.fromARGB(50, 251, 251, 251)
                 ),
                 child: const Column(

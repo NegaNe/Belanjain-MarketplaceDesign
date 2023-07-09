@@ -7,7 +7,7 @@ class chatPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Color.fromRGBO(240, 239, 239, 0.984),
+        backgroundColor: const Color.fromRGBO(240, 239, 239, 0.984),
         appBar: AppBar(
           title: const Row(children: [
             Image(
@@ -27,7 +27,7 @@ class chatPage extends StatelessWidget {
         ),
         bottomNavigationBar: BottomAppBar(
           //Padding(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           child: Row(
             children: [
               Expanded(
@@ -38,7 +38,7 @@ class chatPage extends StatelessWidget {
                     children: [
                       Expanded(
                         child: Container(
-                            margin: EdgeInsets.fromLTRB(25, 0, 25, 0),
+                            margin: const EdgeInsets.fromLTRB(25, 0, 25, 0),
                             child: const TextField(
                               keyboardType: TextInputType.multiline,
                               maxLines: null,
@@ -56,9 +56,9 @@ class chatPage extends StatelessWidget {
               MaterialButton(
                 onPressed: () {},
                 minWidth: 0,
-                padding:
-                    EdgeInsets.only(top: 10, bottom: 10, right: 10, left: 10),
-                shape: CircleBorder(),
+                padding: const EdgeInsets.only(
+                    top: 10, bottom: 10, right: 10, left: 10),
+                shape: const CircleBorder(),
                 child: const Icon(
                   Icons.send,
                   color: Colors.black,
@@ -68,25 +68,6 @@ class chatPage extends StatelessWidget {
             ],
           ),
         ),
-
-        /*
-          color: Colors.white,
-          child: Container(
-            alignment: Alignment.center,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(10),
-              border: Border.all(width: 1),
-            ),
-            child: const TextField(
-              decoration: InputDecoration(
-                hintText: 'Send Message',
-                border: InputBorder.none,
-                suffixIcon: Icon(Icons.add_a_photo),
-                prefixIcon: Icon(Icons.image_rounded),
-              ),
-            ),
-          ),*/
-
         body: Container(
             // decoration: BoxDecoration(border: Border.all(width: 1)),
             margin: const EdgeInsets.all(15),
@@ -94,14 +75,15 @@ class chatPage extends StatelessWidget {
               child: Column(children: [
                 Container(
                   alignment: Alignment.topLeft,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    constraints: BoxConstraints(minWidth: 100, maxWidth: 250),
-                    padding: EdgeInsets.all(15),
+                    constraints:
+                        const BoxConstraints(minWidth: 100, maxWidth: 250),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(15)),
-                    child: Text(
+                    child: const Text(
                       'Ada yang bisa dibantu?',
                       style: TextStyle(color: Colors.white),
                     ),
@@ -109,14 +91,15 @@ class chatPage extends StatelessWidget {
                 ),
                 Container(
                   alignment: Alignment.bottomRight,
-                  padding: EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10),
                   child: Container(
-                    constraints: BoxConstraints(minWidth: 100, maxWidth: 250),
-                    padding: EdgeInsets.all(15),
+                    constraints:
+                        const BoxConstraints(minWidth: 100, maxWidth: 250),
+                    padding: const EdgeInsets.all(15),
                     decoration: BoxDecoration(
                         color: Colors.blue,
                         borderRadius: BorderRadius.circular(15)),
-                    child: Text(
+                    child: const Text(
                       'Jual lenovo legion tidak?',
                       style: TextStyle(color: Colors.white),
                     ),

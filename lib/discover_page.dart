@@ -6,53 +6,35 @@ class DiscoverPage extends StatelessWidget {
 
   final String url =
       'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png';
-  // final List<String> entries = <String>['A', 'B', 'C', 'D', 'E', 'F'];
-  // final List<int> colorCodes = <int>[600, 500, 100, 200, 400, 300];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
           actions: [
             Container(
-                margin: EdgeInsets.all(15),
+                margin: const EdgeInsets.all(15),
                 child: Row(children: [
                   IconButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/cart');
-                        //ScaffoldMessenger.of(context).showSnackBar(
-                        //    const SnackBar(content: Text('This is a chat')));
                       },
                       tooltip: 'Cart',
                       icon: const Icon(Icons.shopping_cart)),
-
-                  // const SizedBox(
-                  //   width: 15,
-                  // ),
-                  // Icon(Icons.notifications),
                   IconButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/chat');
-                        //ScaffoldMessenger.of(context).showSnackBar(
-                        //    const SnackBar(content: Text('This is a chat')));
                       },
                       tooltip: 'Chat',
                       icon: const Icon(Icons.message_sharp)),
-
-                  // const SizedBox(
-                  //   width: 15,
-                  // ),
-
                   IconButton(
                       onPressed: () {
                         Navigator.pushNamed(context, '/profile');
-                        //ScaffoldMessenger.of(context).showSnackBar(
-                        //    const SnackBar(content: Text('This is a chat')));
                       },
                       tooltip: 'Profile',
                       icon: const Icon(Icons.person_2_sharp)),
                 ]))
           ],
-          title: Text('Discover'),
+          title: const Text('Discover'),
         ),
         body: Container(
             child: Column(children: [
@@ -61,7 +43,7 @@ class DiscoverPage extends StatelessWidget {
             margin: const EdgeInsets.all(10),
             height: 45,
             decoration: BoxDecoration(
-              border: Border.all(color: Color(0xffD9D9D9D9)),
+              border: Border.all(color: const Color(0xffD9D9D9D9)),
               borderRadius: BorderRadius.circular(10),
             ),
             child: const TextField(
@@ -75,14 +57,14 @@ class DiscoverPage extends StatelessWidget {
             children: [
               Container(
                 padding: const EdgeInsets.all(5),
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFF6D6E4C),
+                  color: const Color(0xFF6D6E4C),
                 ),
                 child: TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Electronic',
                       style: TextStyle(
                         fontFamily: 'Oswald',
@@ -93,15 +75,16 @@ class DiscoverPage extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(5),
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(width: 1.5, color: Color(0xffD9D9D9D9)),
+                  border:
+                      Border.all(width: 1.5, color: const Color(0xffD9D9D9D9)),
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFFFFFFF),
+                  color: const Color(0xFFFFFFFF),
                 ),
                 child: TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Appliance',
                       style: TextStyle(
                         fontFamily: 'Oswald',
@@ -112,15 +95,16 @@ class DiscoverPage extends StatelessWidget {
               ),
               Container(
                 padding: const EdgeInsets.all(5),
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 decoration: BoxDecoration(
-                  border: Border.all(width: 1.5, color: Color(0xffD9D9D9D9)),
+                  border:
+                      Border.all(width: 1.5, color: const Color(0xffD9D9D9D9)),
                   borderRadius: BorderRadius.circular(10),
-                  color: Color(0xFFFFFFFF),
+                  color: const Color(0xFFFFFFFF),
                 ),
                 child: TextButton(
                     onPressed: () {},
-                    child: Text(
+                    child: const Text(
                       'Handphone',
                       style: TextStyle(
                         fontFamily: 'Oswald',
@@ -138,11 +122,11 @@ class DiscoverPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Container(
-                    padding: EdgeInsets.all(25),
+                    padding: const EdgeInsets.all(25),
                     color: Colors.blue.shade300,
                     child: Column(
                       children: [
-                        Text(
+                        const Text(
                           'Mega Sale',
                           style: TextStyle(
                               fontWeight: FontWeight.bold, fontSize: 24),
