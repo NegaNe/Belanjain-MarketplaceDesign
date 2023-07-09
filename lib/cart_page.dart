@@ -80,7 +80,8 @@ class Cart extends StatelessWidget {
                       width: 25,
                       height: 25,
                     ),
-                    Text(store[index],
+                    Text(
+                      store[index],
                       style: TextStyle(
                         fontFamily: 'OswaldReg',
                       ),
@@ -95,11 +96,12 @@ class Cart extends StatelessWidget {
                   decoration: BoxDecoration(
                     border: Border.all(
                       color: Colors.black,
-                      ),
-                  color: Color(0xffE0E0D9),
+                    ),
+                    color: Color(0xffE0E0D9),
                   ),
                   child: Row(
                     children: [
+                      Text('1x'),
                       const Image(
                         image: NetworkImage(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
@@ -109,18 +111,23 @@ class Cart extends StatelessWidget {
                       Column(
                         children: [
                           Row(
-                            children: [Text(product[index],
-                            style: TextStyle(
-                              fontFamily: 'OswaldReg',
-                            ),
-                            )],
+                            children: [
+                              Text(
+                                product[index],
+                                style: TextStyle(
+                                  fontFamily: 'OswaldReg',
+                                ),
+                              )
+                            ],
                           ),
                           Row(
-                            children: [Text('Rp. ${price[index]}',
-                            style: TextStyle(
-                              fontFamily: 'OswaldReg',
-                            ),
-                            ),
+                            children: [
+                              Text(
+                                'Rp. ${price[index]}',
+                                style: TextStyle(
+                                  fontFamily: 'OswaldReg',
+                                ),
+                              ),
                             ],
                           )
                         ],
