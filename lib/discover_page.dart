@@ -29,10 +29,18 @@ class DiscoverPage extends StatelessWidget {
                   //   width: 15,
                   // ),
                   // Icon(Icons.notifications),
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/chat');
+                        //ScaffoldMessenger.of(context).showSnackBar(
+                        //    const SnackBar(content: Text('This is a chat')));
+                      },
+                      tooltip: 'Chat',
+                      icon: const Icon(Icons.message_sharp)),
 
-                  const SizedBox(
-                    width: 15,
-                  ),
+                  // const SizedBox(
+                  //   width: 15,
+                  // ),
 
                   IconButton(
                       onPressed: () {
