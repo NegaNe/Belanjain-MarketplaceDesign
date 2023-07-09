@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
         '/cart': (context) => const Cart(),
         '/payment': (context) => const Payment(),
         '/chat': (context) => const chatPage(),
-        '/discover': (context) => DiscoverPage(),
+        '/discover': (context) => const DiscoverPage(),
         '/product': (context) => const ProductPage(),
       },
       theme: ThemeData(

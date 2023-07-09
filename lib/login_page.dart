@@ -120,7 +120,7 @@ class LoginPage extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Center(
                   child: TextButton(
                 onPressed: () {
