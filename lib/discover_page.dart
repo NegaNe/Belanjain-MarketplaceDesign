@@ -15,12 +15,37 @@ class DiscoverPage extends StatelessWidget {
           actions: [
             Container(
                 margin: EdgeInsets.all(15),
-                child: Row(children: [
-                  Icon(Icons.shopping_cart),
-                  SizedBox(
+                child: Row(
+                  children: [
+
+                  IconButton(
+                    onPressed: () {
+                    Navigator.pushNamed(context, '/cart');
+                    //ScaffoldMessenger.of(context).showSnackBar(
+                    //    const SnackBar(content: Text('This is a chat')));
+                  },
+                    tooltip: 'Cart',
+                    icon : const Icon (Icons.shopping_cart)
+                  ),
+
+                  const SizedBox(
                     width: 15,
                   ),
-                  Icon(Icons.notifications)
+                  Icon(Icons.notifications),
+
+                  const SizedBox(
+                    width: 15,
+                  ),
+
+                  IconButton(
+                    onPressed: () {
+                    Navigator.pushNamed(context, '/profile');
+                    //ScaffoldMessenger.of(context).showSnackBar(
+                    //    const SnackBar(content: Text('This is a chat')));
+                  },
+                    tooltip: 'Profile',
+                    icon : const Icon (Icons.person_2_sharp)
+                  ),
                 ]))
           ],
           title: Text('Discover'),

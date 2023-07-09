@@ -17,6 +17,7 @@ class ProductPage extends StatelessWidget {
             ),
           ),
         ),
+
         bottomNavigationBar: BottomAppBar(
             color: Color.fromARGB(255, 234, 217, 70),
             padding: EdgeInsets.all(20),
@@ -42,16 +43,23 @@ class ProductPage extends StatelessWidget {
                 SizedBox(
                   width: 25,
                 ),
-                Container(
-                  // padding: EdgeInsets.all(15),
-                  width: 50,
-                  height: 50,
-                  decoration: BoxDecoration(
-                      color: Color.fromRGBO(100, 110, 76, 1),
-                      borderRadius: BorderRadius.circular(15)),
-                  child: Icon(
-                    Icons.message_sharp,
-                    color: Colors.white,
+
+                InkWell(
+                  onTap: (){
+                    Navigator.pushNamed(context, '/chat');
+                  },
+                  child: Container(
+                    // padding: EdgeInsets.all(15),
+                    
+                    width: 50,
+                    height: 50,
+                    decoration: BoxDecoration(
+                        color: Color.fromRGBO(100, 110, 76, 1),
+                        borderRadius: BorderRadius.circular(15)),
+                    child: Icon(
+                      Icons.message_sharp,
+                      color: Colors.white,
+                    ),
                   ),
                 )
               ],

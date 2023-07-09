@@ -15,7 +15,9 @@ class CardReuseable extends StatelessWidget {
           child: Card(
             child: InkWell(
               splashColor: Colors.blue.withAlpha(30),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/product');
+              },
               child: Container(
                   // height: 100,
                   child: Column(children: [
@@ -37,7 +39,9 @@ class CardReuseable extends StatelessWidget {
           child: Card(
             child: InkWell(
               splashColor: Colors.blue.withAlpha(30),
-              onTap: () {},
+              onTap: () {
+                Navigator.pushNamed(context, '/product');
+              },
               child: Container(
                   // height: 100,
                   child: Column(children: [
