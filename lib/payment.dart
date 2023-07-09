@@ -30,7 +30,7 @@ class Payment extends StatelessWidget {
         children: [
           Container(
             margin: EdgeInsetsDirectional.all(25),
-            color: Colors.amber,
+            // color: Colors.amber,
             child: const Row(
               children: [
                 Row(
@@ -53,9 +53,11 @@ class Payment extends StatelessWidget {
                 margin: EdgeInsets.fromLTRB(25, 0, 25, 0),
                 padding: EdgeInsets.fromLTRB(0, 25, 0, 25),
                 decoration: BoxDecoration(
+                  color: Color(0xffFBFBFB),
                     border: Border.all(
                         width: 1, color: Color.fromARGB(255, 163, 163, 163)),
-                    color: Color.fromARGB(50, 251, 251, 251)),
+                    // color: Color.fromARGB(50, 251, 251, 251)
+                    ),
                 child: const Column(
                   children: [
                     Row(
@@ -170,7 +172,7 @@ class Payment extends StatelessWidget {
                 )),
           ),
           SizedBox(
-            height: 75,
+            height: 55,
           ),
           DecoratedBox(
             decoration: BoxDecoration(
@@ -205,7 +207,9 @@ class Payment extends StatelessWidget {
           Container(
               margin: EdgeInsets.only(left: 130),
               child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pushNamed(context, '/discover');
+                  },
                   child: Container(
                     margin: EdgeInsets.only(left: 0),
                     padding: EdgeInsets.fromLTRB(90, 10, 90, 10),

@@ -69,7 +69,7 @@ class Cart extends StatelessWidget {
         itemCount: store.length,
         itemBuilder: (BuildContext context, int index) {
           return Container(
-            color: Colors.cyan,
+            color: Colors.white,
             child: Column(
               children: [
                 Row(
@@ -80,26 +80,48 @@ class Cart extends StatelessWidget {
                       width: 25,
                       height: 25,
                     ),
-                    Text(store[index])
+                    Text(store[index],
+                      style: TextStyle(
+                        fontFamily: 'OswaldReg',
+                      ),
+                    ),
                   ],
                 ),
+                SizedBox(
+                  height: 10,
+                ),
                 Container(
-                  color: Colors.grey,
+                  padding: EdgeInsets.fromLTRB(10, 10, 0, 20),
+                  decoration: BoxDecoration(
+                    border: Border.all(
+                      color: Colors.black,
+                      ),
+                  color: Color(0xffE0E0D9),
+                  ),
                   child: Row(
                     children: [
                       const Image(
                         image: NetworkImage(
                             'https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/PlayStation_5_and_DualSense_with_transparent_background.png/330px-PlayStation_5_and_DualSense_with_transparent_background.png'),
-                        height: 50,
+                        height: 80,
                         width: 59,
                       ),
                       Column(
                         children: [
                           Row(
-                            children: [Text(product[index])],
+                            children: [Text(product[index],
+                            style: TextStyle(
+                              fontFamily: 'OswaldReg',
+                            ),
+                            )],
                           ),
                           Row(
-                            children: [Text('Rp. ${price[index]}')],
+                            children: [Text('Rp. ${price[index]}',
+                            style: TextStyle(
+                              fontFamily: 'OswaldReg',
+                            ),
+                            ),
+                            ],
                           )
                         ],
                       )
