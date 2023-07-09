@@ -43,7 +43,7 @@ class Cart extends StatelessWidget {
         color: Color.fromRGBO(255, 255, 255, 1),
         child: Center(
           child: FractionallySizedBox(
-            widthFactor: 0.15,
+            widthFactor: 1,
             child: InkWell(
               child: Container(
                   alignment: Alignment.center,

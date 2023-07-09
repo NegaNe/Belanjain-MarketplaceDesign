@@ -15,37 +15,33 @@ class DiscoverPage extends StatelessWidget {
           actions: [
             Container(
                 margin: EdgeInsets.all(15),
-                child: Row(
-                  children: [
-
+                child: Row(children: [
                   IconButton(
-                    onPressed: () {
-                    Navigator.pushNamed(context, '/cart');
-                    //ScaffoldMessenger.of(context).showSnackBar(
-                    //    const SnackBar(content: Text('This is a chat')));
-                  },
-                    tooltip: 'Cart',
-                    icon : const Icon (Icons.shopping_cart)
-                  ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/cart');
+                        //ScaffoldMessenger.of(context).showSnackBar(
+                        //    const SnackBar(content: Text('This is a chat')));
+                      },
+                      tooltip: 'Cart',
+                      icon: const Icon(Icons.shopping_cart)),
 
-                  const SizedBox(
-                    width: 15,
-                  ),
-                  Icon(Icons.notifications),
+                  // const SizedBox(
+                  //   width: 15,
+                  // ),
+                  // Icon(Icons.notifications),
 
                   const SizedBox(
                     width: 15,
                   ),
 
                   IconButton(
-                    onPressed: () {
-                    Navigator.pushNamed(context, '/profile');
-                    //ScaffoldMessenger.of(context).showSnackBar(
-                    //    const SnackBar(content: Text('This is a chat')));
-                  },
-                    tooltip: 'Profile',
-                    icon : const Icon (Icons.person_2_sharp)
-                  ),
+                      onPressed: () {
+                        Navigator.pushNamed(context, '/profile');
+                        //ScaffoldMessenger.of(context).showSnackBar(
+                        //    const SnackBar(content: Text('This is a chat')));
+                      },
+                      tooltip: 'Profile',
+                      icon: const Icon(Icons.person_2_sharp)),
                 ]))
           ],
           title: Text('Discover'),
@@ -77,17 +73,15 @@ class DiscoverPage extends StatelessWidget {
                   color: Color(0xFF6D6E4C),
                 ),
                 child: TextButton(
-                  onPressed: () {
-
-                  },
-                  child: Text(
-                    'Electronic',
-                    style: TextStyle(
-                      fontFamily: 'Oswald',
-                      fontWeight: FontWeight.w900,
-                      color: Color(0xffFFFFFF),
-                    ),
-                  )),
+                    onPressed: () {},
+                    child: Text(
+                      'Electronic',
+                      style: TextStyle(
+                        fontFamily: 'Oswald',
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xffFFFFFF),
+                      ),
+                    )),
               ),
               Container(
                 padding: const EdgeInsets.all(5),
@@ -98,17 +92,15 @@ class DiscoverPage extends StatelessWidget {
                   color: Color(0xFFFFFFFF),
                 ),
                 child: TextButton(
-                  onPressed: () {
-
-                  },
-                  child: Text(
-                    'Appliance',
-                    style: TextStyle(
-                      fontFamily: 'Oswald',
-                      fontWeight: FontWeight.w900,
-                      color: Color(0xff000000),
-                    ),
-                  )),
+                    onPressed: () {},
+                    child: Text(
+                      'Appliance',
+                      style: TextStyle(
+                        fontFamily: 'Oswald',
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xff000000),
+                      ),
+                    )),
               ),
               Container(
                 padding: const EdgeInsets.all(5),
@@ -119,17 +111,15 @@ class DiscoverPage extends StatelessWidget {
                   color: Color(0xFFFFFFFF),
                 ),
                 child: TextButton(
-                  onPressed: () {
-
-                  },
-                  child: Text(
-                    'Handphone',
-                    style: TextStyle(
-                      fontFamily: 'Oswald',
-                      fontWeight: FontWeight.w900,
-                      color: Color(0xff000000),
-                    ),
-                  )),
+                    onPressed: () {},
+                    child: Text(
+                      'Handphone',
+                      style: TextStyle(
+                        fontFamily: 'Oswald',
+                        fontWeight: FontWeight.w900,
+                        color: Color(0xff000000),
+                      ),
+                    )),
               ),
             ],
           ),
