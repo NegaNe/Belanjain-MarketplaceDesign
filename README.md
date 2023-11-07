@@ -1,5 +1,6 @@
 # Marketplace "Belanjain" Frontend Design
-using Dart Flutter
+The Marketplace "Belanjain" is made using Dart & Flutter. It is a front-end design made for University Final Project for Software Development.
+The design grasps a simple design made to be easy to use and very user friendly.
 
 ## Login page
 
